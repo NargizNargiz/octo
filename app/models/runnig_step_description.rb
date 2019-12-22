@@ -1,0 +1,3 @@
+class RunnigStepDescription < ApplicationRecord
+
+end
