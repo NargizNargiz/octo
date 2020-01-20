@@ -1,11 +1,4 @@
 Rails.application.routes.draw do
-  get 'sttep_descriptions/index'
-  get 'sttep_descriptions/show'
-  get 'sttep_descriptions/new'
-  get 'sttep_descriptions/edit'
-  get 'sttep_descriptions/create'
-  get 'sttep_descriptions/update'
-  get 'sttep_descriptions/destroy'
   get 'sttep_description/index'
   get 'sttep_description/show'
   get 'sttep_description/new'
