@@ -1,0 +1,2 @@
+class AllScriptsDescription < ApplicationRecord
+end
