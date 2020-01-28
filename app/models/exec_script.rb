@@ -1,0 +1,2 @@
+class ExecScript < ApplicationRecord
+end

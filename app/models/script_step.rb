@@ -1,0 +1,2 @@
+class ScriptStep < ApplicationRecord
+end
