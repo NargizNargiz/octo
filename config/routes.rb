@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'all_scripts_descriptions/show'
+  get 'all_scripts_descriptions/new'
+  get 'all_scripts_descriptions/create'
   get 'sttep_description/index'
   get 'sttep_description/show'
   get 'sttep_description/new'
