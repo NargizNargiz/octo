@@ -63,7 +63,5 @@ RSpec.describe ExecScript, type: :model do
  		@exec_script.success = 2 		
  		expect(@exec_script.valid?).to eq(false)
  	end
-
-
  end
 end
