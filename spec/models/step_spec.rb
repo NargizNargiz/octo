@@ -4,7 +4,9 @@ RSpec.describe Step, type: :model do
   # pending "add some examples to (or delete) #{__FILE__}"
   context "validation tests" do
  	before :each do
+ 		@script_st = ScriptStep.new(script_name: "QWERTY",name_step:"stepQwerty")
  		@step = Step.new(name_step: "StepQWERTY", name_script: "QWERTY", status: "Finish", rollbacks: 0)
+ 		@step.script_step = @script_st
  	end
  	it "should be valid" do
  		expect(@step.valid?).to eq(true)
