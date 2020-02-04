@@ -6,6 +6,7 @@ class CreateSteps < ActiveRecord::Migration[5.2]
       t.string :status
       t.integer :rollbacks
 
+      t.belongs_to :scriptStep
       t.timestamps
     end
   end

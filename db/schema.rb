@@ -13,10 +13,12 @@
 ActiveRecord::Schema.define(version: 2020_01_28_142503) do
 
   create_table "all_scripts_descriptions", force: :cascade do |t|
+    t.integer "scriptStep_id"
     t.string "name_script"
     t.text "steps"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["scriptStep_id"], name: "index_all_scripts_descriptions_on_scriptStep_id"
   end
 
   create_table "exec_scripts", force: :cascade do |t|
@@ -46,10 +48,14 @@ ActiveRecord::Schema.define(version: 2020_01_28_142503) do
   end
 
   create_table "script_steps", force: :cascade do |t|
+    t.integer "allScriptDescription_id"
+    t.integer "execScript_id"
     t.string "script_name"
     t.string "name_step"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["allScriptDescription_id"], name: "index_script_steps_on_allScriptDescription_id"
+    t.index ["execScript_id"], name: "index_script_steps_on_execScript_id"
   end
 
   create_table "step_descriptions", force: :cascade do |t|
@@ -64,8 +70,10 @@ ActiveRecord::Schema.define(version: 2020_01_28_142503) do
     t.string "name_script"
     t.string "status"
     t.integer "rollbacks"
+    t.integer "scriptStep_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["scriptStep_id"], name: "index_steps_on_scriptStep_id"
   end
 
 end
