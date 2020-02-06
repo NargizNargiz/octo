@@ -5,6 +5,6 @@ class ExecScript < ApplicationRecord
 	validates :success, numericality: {only_integer: true, greater_than_or_equal_to: 0, less_than: 2}
 	
 	has_one   :all_scripts_description
-	has_one   :script_step
+	belongs_to   :script_step
 
 end
