@@ -43,5 +43,8 @@ RSpec.describe Step, type: :model do
  		@step.status = "    "
  		expect(@step.valid?).to eq(false)
  	end
-  end
+ end
+  
+ 
+
 end

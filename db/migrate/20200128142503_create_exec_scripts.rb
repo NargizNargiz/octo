@@ -5,8 +5,8 @@ class CreateExecScripts < ActiveRecord::Migration[5.2]
       t.integer :success
       t.integer :limit_errors
       t.integer :rollbacks
-      t.belongs_to :script_step
-
+      
+      # t.belongs_to :script_step
       t.timestamps
     end
   end

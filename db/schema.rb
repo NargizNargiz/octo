@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_28_142503) do
+ActiveRecord::Schema.define(version: 2020_02_22_164705) do
 
   create_table "all_scripts_descriptions", force: :cascade do |t|
     t.string "name_script"
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 2020_01_28_142503) do
     t.string "name_step"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "exec_script"
     t.index ["all_scripts_description_id"], name: "index_script_steps_on_all_scripts_description_id"
   end
 
@@ -47,6 +48,7 @@ ActiveRecord::Schema.define(version: 2020_01_28_142503) do
     t.integer "script_step_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "exec_script_id"
     t.index ["script_step_id"], name: "index_steps_on_script_step_id"
   end
 

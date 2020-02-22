@@ -5,10 +5,12 @@ RSpec.describe ScriptStep, type: :model do
   context "validation test" do
     before :each do
       @execScript = ExecScript.new(script_name: "QWERTY", success: 0, limit_errors: 10, rollbacks: 0)
-      @scriptDesctiption = AllScriptsDescription.new(name_script: "QWERTY", steps: "s1,s2,s3,s4,s5")
+      # @scriptDesctiption = AllScriptsDescription.new(name_script: "QWERTY", steps: "s1,s2,s3,s4,s5")
+     
       @script_step = ScriptStep.new(script_name: "QWERTY",name_step:"stepQwerty")
+     
       @script_step.exec_script = @execScript
-      @script_step.all_scripts_description = @scriptDesctiption
+      # @script_step.all_scripts_description = @scriptDesctiption
  	  end
  	  
     it "should be valid" do
