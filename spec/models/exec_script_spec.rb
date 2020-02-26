@@ -5,6 +5,7 @@ RSpec.describe ExecScript, type: :model do
  context "validation tests" do
  	before :each do
  		@exec_script = ExecScript.new(script_name: "QWERTY", success: 0, limit_errors: 10, rollbacks: 0)
+ 		
  	end
  	it "should be valid" do
  		expect(@exec_script.valid?).to eq(true)

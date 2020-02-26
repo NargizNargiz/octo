@@ -5,6 +5,7 @@ RSpec.describe AllScriptsDescription, type: :model do
  
  context "validation tests" do
  	before :each do
+ 		
  		@script_description = AllScriptsDescription.new(name_script: "QWERTY", steps: "s1,s2,s3,s4,s5")
  	end
  	it "should be valid" do
