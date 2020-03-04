@@ -1,14 +1,13 @@
 <h1>AllScriptsDescriptions#new</h1>
-<p>Я создал один экзмепляр класса  <%= @all_scripts_description.class %> </p>
-<%= form_with scope: :all_scripts_description, local: true do |form| %>
+<%= form_with scope: :all_scripts_description, url: all_scripts_descriptions_path, local: true do |form| %>
   <p>
     <%= form.label :name_script %><br>
-    <%= form.text_field :title %>
+    <%= form.text_field :name_script %>
   </p>
 
   <p>
     <%= form.label :steps %><br>
-    <%= form.text_area :text %>
+    <%= form.text_area :steps %>
   </p>
 
   <p>
