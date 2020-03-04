@@ -1,2 +1,17 @@
 <h1>AllScriptsDescriptions#new</h1>
-<p>Find me in app/views/all_scripts_descriptions/new.html.erb</p>
+<p>Я создал один экзмепляр класса  <%= @all_scripts_description.class %> </p>
+<%= form_with scope: :all_scripts_description, local: true do |form| %>
+  <p>
+    <%= form.label :name_script %><br>
+    <%= form.text_field :title %>
+  </p>
+
+  <p>
+    <%= form.label :steps %><br>
+    <%= form.text_area :text %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
