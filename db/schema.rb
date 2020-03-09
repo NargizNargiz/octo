@@ -24,17 +24,20 @@ ActiveRecord::Schema.define(version: 2020_01_28_142503) do
     t.integer "success"
     t.integer "limit_errors"
     t.integer "rollbacks"
+    t.integer "script_step_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["script_step_id"], name: "index_exec_scripts_on_script_step_id"
   end
 
   create_table "script_steps", force: :cascade do |t|
-    t.integer "exec_script_id"
+    t.integer "all_scripts_description_id"
     t.string "script_name"
     t.string "name_step"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["exec_script_id"], name: "index_script_steps_on_exec_script_id"
+    t.integer "exec_script_id"
+    t.index ["all_scripts_description_id"], name: "index_script_steps_on_all_scripts_description_id"
   end
 
   create_table "steps", force: :cascade do |t|
@@ -42,9 +45,9 @@ ActiveRecord::Schema.define(version: 2020_01_28_142503) do
     t.string "name_script"
     t.string "status"
     t.integer "rollbacks"
-    t.integer "script_step_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "exec_script_id"
     t.index ["script_step_id"], name: "index_steps_on_script_step_id"
   end
 

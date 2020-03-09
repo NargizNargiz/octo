@@ -10,13 +10,13 @@
   </thead>
 
   <tbody>
-    <% @all_scripts_descriptions.each do |script| %>
+    <% @all_scripts_descriptions.each do |all_scripts_description| %>
       <tr>
-        <td><%= script.name_script %></td>
-        <td><%= script.steps %></td>
-        <td><%= link_to "Show", script %></td>
-        <td><%= link_to "Edit", edit_all_scripts_description_path(script) %></td>
-        <td><%= link_to "Destroy", all_scripts_description, method: :delete, data: { confirm: "Are you sure?" } %></td>
+        <td><%= all_scripts_description.name_script %></td>
+        <td><%= all_scripts_description.steps %></td>
+        <td><%= link_to "Show", all_scripts_description %></td>
+        <td><%= link_to "Edit", edit_all_scripts_description_path(all_scripts_description) %></td>
+        <td><%= link_to "Destroy",all_scripts_description, method: :delete, data: { confirm: "Are you sure?" } %></td>
       </tr>
     <% end %>
   </tbody>
