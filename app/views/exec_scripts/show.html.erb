@@ -1,0 +1,25 @@
+<h1>ExecScripts#show</h1>
+<p>Find me in app/views/exec_script/show.html.erb</p>
+
+<p>
+  <strong>Script name:</strong>
+  <%= @exec_script.script_name %>
+</p>
+
+<p>
+  <strong>Rollbacks:</strong>
+  <%= @exec_script.rollbacks %>
+</p>
+
+<p>
+  <strong>Limit errors:</strong>
+  <%= @exec_script.limit_errors %>
+</p>
+
+<p>
+  <strong>Success:</strong>
+  <%= @exec_script.success %>
+</p>
+
+
+<%= link_to 'Back', all_scripts_descriptions_path %>
