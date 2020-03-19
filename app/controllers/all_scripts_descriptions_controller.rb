@@ -4,7 +4,7 @@ class AllScriptsDescriptionsController < ApplicationController
   end
 
   def show
-      @all_scripts_descriptions = AllScriptsDescription.find(params[:id])
+      @all_scripts_description = AllScriptsDescription.find(params[:id])
 	end
 
   def new
