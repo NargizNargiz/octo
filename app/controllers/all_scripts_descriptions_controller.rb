@@ -4,7 +4,7 @@ class AllScriptsDescriptionsController < ApplicationController
   end
 
   def show
-      @all_scripts_description = AllScriptsDescription.find(params[:id])
+      @all_scripts_description = AllScriptsDescription.find_by(:id)
 	end
 
   def new
@@ -17,7 +17,7 @@ class AllScriptsDescriptionsController < ApplicationController
   def create
   	# render plain: params[:all_scripts_description].inspect
   	@all_scripts_description = AllScriptsDescription.new(all_scripts_description_params)
-
+    byebug
     respond_to do |format|
       if @all_scripts_description.save
         format.html { redirect_to @all_scripts_description, notice: 'all_scripts_description was successfully created.' }
