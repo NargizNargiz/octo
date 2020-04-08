@@ -4,7 +4,7 @@ RSpec.describe AllScriptsDescriptionsController, type: :controller do
 
   describe "GET #show" do
     it "returns http success" do
-      get :show
+      get :show, params: {id: 1}
       expect(response).to have_http_status(:success)
     end
   end
@@ -16,11 +16,11 @@ RSpec.describe AllScriptsDescriptionsController, type: :controller do
     end
   end
 
-  describe "GET #create" do
-    it "returns http success" do
-      get :create
-      expect(response).to have_http_status(:success)
-    end
-  end
+  # describe "GET #create" do
+  #   it "returns http success" do
+  #     get :create, :params => {name_script: "Name_Script", steps: "steps" }
+  #     expect(response).to have_http_status(:success)
+  #   end
+  # end
 
 end
