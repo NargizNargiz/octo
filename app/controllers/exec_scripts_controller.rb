@@ -4,7 +4,7 @@ class ExecScriptsController < ApplicationController
   end
 
   def show
-    @exec_script = ExecScript.find(params[:id])
+    @exec_script = ExecScript.find_by(params[:id])
 	end
 
   def new
@@ -31,7 +31,7 @@ class ExecScriptsController < ApplicationController
 
   private
  	  def exec_script_params
-    	params.require(:exec_script).permit(:script_name, :rollbacks, :limit_errors, :success)
+    	params.permit(:exec_script)
   	end
 
 

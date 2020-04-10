@@ -9,8 +9,11 @@ class ScriptStepsController < ApplicationController
   end
 
   def create
+    exec_scr = ExecScript.new
+
   	@script_step = ScriptStep.new(script_step_params)
-  	respond_to do |format|
+  	@script_step.exec_script = exec_scr
+    respond_to do |format|
   		if @script_step.save
   			format.html {redirect_to script_step, notice: 'script_step wass successfully created'}
   			format.json {render :show, status: :created, location: @script_step}
@@ -22,10 +25,10 @@ class ScriptStepsController < ApplicationController
   end
 
   def show
-  	@script_step = Script_Step.find(params[:id])
+  	@script_step = ScriptStep.find_by(params[:id])
   end
   private 
     def script_step_params
-      params.require(:script_step).permit(:script_name, :name_step)
+      params.permit(:script_step)
     end
 end
