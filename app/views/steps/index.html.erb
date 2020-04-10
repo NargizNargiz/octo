@@ -1,2 +1,34 @@
 <h1>Steps#index</h1>
 <p>Find me in app/views/steps/index.html.erb</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name Step</th>
+      <th>Name Script</th>
+      <th>Status</th>
+      <th>Rollbacks</th>
+      <th></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @steps.each do |step| %>
+      <tr>
+        <td><%= step.name_step %></td>
+        <td><%= step.name_script %></td>
+        <td><%= step.status %></td>
+        <td><%= step.rollbacks %></td>
+
+        <td><%= link_to "Show", script_step %></td>
+        <td><%= link_to "Edit", edit_script_step_path(script_step) %></td>
+        <td><%= link_to "Destroy",script_step, method: :delete, data: { confirm: "Are you sure?" } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to "New script step", new_script_step_path %>

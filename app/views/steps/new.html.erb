@@ -1,2 +1,26 @@
-<h1>Steps#new</h1>
-<p>Find me in app/views/steps/new.html.erb</p>
+<h1>Step#new</h1>
+<%= form_with scope: :step, url: steps_path, local: true do |form| %>
+  <p>
+    <%= form.label :name_step %><br>
+    <%= form.text_field :name_step %>
+  </p>
+
+  <p>
+    <%= form.label :name_script %><br>
+    <%= form.text_field :name_script %>
+  </p>
+
+  <p>
+    <%= form.label :status %><br>
+    <%= form.number_field :status %>
+  </p>
+
+  <p>
+    <%= form.label :rollbacks %><br>
+    <%= form.number_field :rollbacks %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
