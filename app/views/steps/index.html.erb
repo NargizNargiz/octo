@@ -21,9 +21,9 @@
         <td><%= step.status %></td>
         <td><%= step.rollbacks %></td>
 
-        <td><%= link_to "Show", script_step %></td>
-        <td><%= link_to "Edit", edit_script_step_path(script_step) %></td>
-        <td><%= link_to "Destroy",script_step, method: :delete, data: { confirm: "Are you sure?" } %></td>
+        <td><%= link_to "Show", step %></td>
+        <td><%= link_to "Edit", edit_step_path(step) %></td>
+        <td><%= link_to "Destroy",step, method: :delete, data: { confirm: "Are you sure?" } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -31,4 +31,4 @@
 
 <br>
 
-<%= link_to "New script step", new_script_step_path %>
+<%= link_to "New script step", new_step_path %>
