@@ -18,14 +18,14 @@ RSpec.describe StepsController, type: :controller do
 
   describe "GET #create" do
     it "returns http success" do
-      get :create
+      get :create 
       expect(response).to have_http_status(:success)
     end
   end
 
   describe "GET #show" do
     it "returns http success" do
-      get :show
+      get :show, params: {id:1}
       expect(response).to have_http_status(:success)
     end
   end

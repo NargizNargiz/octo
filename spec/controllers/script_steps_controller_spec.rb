@@ -1,10 +1,13 @@
 require 'rails_helper'
 
 RSpec.describe ScriptStepsController, type: :controller do
-  before(:all) do
-      create_list(:script_step, 5)
+  # before(:all) do
+      # create :exec_script, script_name: "123", rollbacks: 1, limit_errors: 2, success: 0
+      # create :script_step, script_name: "qwer", name_step: "sdfsdf", exec_script: exec_script
+
+      # create_list(:script_step, 5)
         # get 'script_step'
-    end
+  # end
 
   describe "GET #new" do
     it "returns http success" do
