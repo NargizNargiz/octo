@@ -19,6 +19,9 @@
         <td><%= exec_script.rollbacks %></td>
         <td><%= exec_script.limit_errors %></td>
         <td><%= exec_script.success %></td>
+
+         <!-- <td><#%=render :partial => 'exec_scripts/exec_script', locals: {exec_script: exec_script} %></td> -->
+
         <td><%= link_to "Show", exec_script %></td>
         <td><%= link_to "Edit", edit_exec_script_path(exec_script) %></td>
         <td><%= link_to "Destroy",exec_script, method: :delete, data: { confirm: "Are you sure?" } %></td>
