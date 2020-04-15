@@ -29,6 +29,6 @@ class ScriptStepsController < ApplicationController
   end
   private 
     def script_step_params
-      params.permit(:script_step)
+      params.fetch(:script_step, {}).permit(:script_name, :name_step)
     end
 end

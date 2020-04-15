@@ -4,7 +4,7 @@ class ExecScriptsController < ApplicationController
   end
 
   def show
-    @exec_script = ExecScript.find_by(params[:id])
+    @exec_script = ExecScript.find(params[:id])
 	end
 
   def new
@@ -13,6 +13,21 @@ class ExecScriptsController < ApplicationController
 
   def edit
   end
+
+  def create_steps(all_scripts_description, script_step)
+    steps = all_scripts_description.steps.split(" ")
+    for step in steps do
+      step_obj = Step.create(name_step: step, name_script: @exec_script.script_name, status:0, rollbacks:0, script_step: script_step)
+      script_step.steps << step_obj
+    end
+  end 
+
+  def create_script_step(scr_name)
+    all_scripts_description = AllScriptsDescription.find_by(name_script: scr_name)
+    script_step = ScriptStep.create(script_name: @exec_script.script_name, name_step: "stepee", exec_script: @exec_script, all_scripts_description: all_scripts_description)
+    create_steps(all_scripts_description, script_step)
+  end
+    
   
   def create
   	# render plain: params[:all_scripts_description].inspect
@@ -21,6 +36,7 @@ class ExecScriptsController < ApplicationController
     respond_to do |format|
       if @exec_script.save
         format.html { redirect_to @exec_script, notice: 'exec_script was successfully created.' }
+        create_script_step(@exec_script.script_name)
         format.json { render :show, status: :created, location: @exec_script }
       else
         format.html { render :new }
@@ -29,9 +45,10 @@ class ExecScriptsController < ApplicationController
     end
   end
 
+
   private
  	  def exec_script_params
-    	params.permit(:exec_script)
+    	params.fetch(:exec_script,{}).permit(:script_name, :rollbacks,:limit_errors, :success)
   	end
 
 

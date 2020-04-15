@@ -30,7 +30,8 @@ class AllScriptsDescriptionsController < ApplicationController
 
   private
  	  def all_scripts_description_params
-    	params.permit(:all_scripts_description)
+      # params.permit(:all_scripts_description)
+    	params.fetch(:all_scripts_description, {}).permit(:name_script, :steps)
   	end
 
 end
