@@ -20,7 +20,7 @@ class ExecScriptsController < ApplicationController
       step_obj = Step.create(name_step: step, name_script: @exec_script.script_name, status:0, rollbacks:0, script_step: script_step)
       script_step.steps << step_obj
     end
-  end 
+  end   
 
   def create_script_step(scr_name)
     all_scripts_description = AllScriptsDescription.find_by(name_script: scr_name)
