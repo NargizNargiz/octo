@@ -12,6 +12,7 @@ class ExecScriptsController < ApplicationController
   end
 
   def edit
+    @exec_script = ExecScript.find(params[:id])
   end
 
   def create_steps(all_scripts_description, script_step)
@@ -41,6 +42,17 @@ class ExecScriptsController < ApplicationController
       else
         format.html { render :new }
         format.json { render json: @exec_script.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+def update
+    @exec_script = ExecScript.find(params[:id])
+    respond_to do |format|
+      if @exec_script.update(exec_script_params)
+        format.html{redirect_to @exec_script, notice: 'Script was successfully updated.'}
+      else
+        format.html{render :edit}
       end
     end
   end

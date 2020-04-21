@@ -1,0 +1,18 @@
+
+<%= form_for(@exec_script) do |f| %>
+  
+  <label>Name script:</label><br>
+  <%= f.text_field :script_name %><br>
+  	
+  <label>Rollbacks</label><br>
+  <%= f.number_field :rollbacks %><br>
+
+ <label>Limit errors</label><br>
+  <%= f.number_field :limit_errors %><br>
+
+ <label>Success</label><br>
+  <%= f.number_field :success %><br>
+
+
+  <%= f.submit %>
+<% end %>
