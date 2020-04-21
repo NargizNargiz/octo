@@ -23,9 +23,24 @@ class StepsController < ApplicationController
   	end
   end
 
+  def edit 
+    @step = Step.find_by(params[:id])
+  end
   def show
   	@step = Step.find_by(params[:id])
   end
+  
+  def update
+    @step = Step.find(params[:id])
+    respond_to do |format|
+      if @step.update(step_params)
+        format.html{redirect_to @step, notice: 'Step Description was successfully updated.'}
+      else
+        format.html{render :edit}
+      end
+    end
+  end
+
   private
   	def step_params
   		params.permit(:step)
