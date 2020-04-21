@@ -12,11 +12,13 @@ class AllScriptsDescriptionsController < ApplicationController
   end
 
   def edit
+      @all_scripts_description = AllScriptsDescription.find(params[:id])
   end
+
   
   def create
   	# render plain: params[:all_scripts_description].inspect
-  	@all_scripts_description = AllScriptsDescription.new(all_scripts_description_params)
+    @all_scripts_description = AllScriptsDescription.new(all_scripts_description_params)
     respond_to do |format|
       if @all_scripts_description.save
         format.html { redirect_to @all_scripts_description, notice: 'all_scripts_description was successfully created.' }
@@ -24,6 +26,17 @@ class AllScriptsDescriptionsController < ApplicationController
       else
         format.html { render :new }
         format.json { render json: @all_scripts_description.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  def update
+    @all_scripts_description = AllScriptsDescription.find(params[:id])
+    respond_to do |format|
+      if @all_scripts_description.update(all_scripts_description_params)
+        format.html{redirect_to @all_scripts_description, notice: 'Scripts Description was successfully updated.'}
+      else
+        format.html{render :edit}
       end
     end
   end
