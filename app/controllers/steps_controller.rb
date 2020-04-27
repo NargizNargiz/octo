@@ -8,7 +8,7 @@ class StepsController < ApplicationController
   end
 
   def create
-  	script_step = ScriptStep.find(1)
+  	# script_step = ScriptStep.find(1)
   	@step =  Step.new(step_params)
   	@step.script_step = script_step
   	# byebug
@@ -24,10 +24,10 @@ class StepsController < ApplicationController
   end
 
   def edit 
-    @step = Step.find_by(params[:id])
+    @step = Step.find(params[:id])
   end
   def show
-  	@step = Step.find_by(params[:id])
+  	@step = Step.find(params[:id])
   end
   
   def update
@@ -40,7 +40,6 @@ class StepsController < ApplicationController
       end
     end
   end
-
   private
   	def step_params
   		params.permit(:step)
