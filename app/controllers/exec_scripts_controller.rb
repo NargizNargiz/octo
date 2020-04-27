@@ -18,7 +18,7 @@ class ExecScriptsController < ApplicationController
   def create_steps(all_scripts_description, script_step)
     steps = all_scripts_description.steps.split(" ")
     for step in steps do
-      step_obj = Step.create(name_step: step, name_script: @exec_script.script_name, status:0, rollbacks:0, script_step: script_step)
+      step_obj = Step.create(name_step: step, name_script: @exec_script.script_name, status:0, rollbacks:0)
       script_step.steps << step_obj
     end
   end   
@@ -26,7 +26,7 @@ class ExecScriptsController < ApplicationController
   def create_script_step(scr_name)
     all_scripts_description = AllScriptsDescription.find_by(name_script: scr_name)
     script_step = ScriptStep.create(script_name: @exec_script.script_name, name_step: "stepee", exec_script: @exec_script, all_scripts_description: all_scripts_description)
-    create_steps(all_scripts_description, script_step)
+    # create_steps(all_scripts_description, script_step)
   end
     
   
@@ -46,6 +46,10 @@ class ExecScriptsController < ApplicationController
     end
   end
 
+  def destroy
+    ExecScript.find(params[:id]).delete
+  end
+
 def update
     @exec_script = ExecScript.find(params[:id])
     respond_to do |format|
@@ -55,7 +59,7 @@ def update
         format.html{render :edit}
       end
     end
-  end
+end
 
 
   private
