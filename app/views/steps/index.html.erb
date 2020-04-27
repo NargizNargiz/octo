@@ -17,7 +17,9 @@
     <% @steps.each do |step| %>
       <tr>
         <td><%= step.name_step %></td>
-        <td><%= step.name_script %></td>
+
+        <td><%= link_to "exec_script" + step.exec_script.id.to_s, exec_script_path(step.exec_script) %></td>
+      
         <td><%= step.status %></td>
         <td><%= step.rollbacks %></td>
 
