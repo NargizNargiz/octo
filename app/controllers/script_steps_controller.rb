@@ -8,6 +8,10 @@ class ScriptStepsController < ApplicationController
 
   end
 
+  def edit 
+    @script_step = ScriptStep.find_by(params[:id])
+  end
+
   def create
     exec_scr = ExecScript.new
 
@@ -27,6 +31,19 @@ class ScriptStepsController < ApplicationController
   def show
   	@script_step = ScriptStep.find_by(params[:id])
   end
+
+  def update
+    @script_step = ScriptStep.find(params[:id])
+    respond_to do |format|
+      if @script_step.update(script_step_params)
+        format.html{redirect_to @exec_script, notice: 'Scripts Description was successfully updated.'}
+      else
+        format.html{render :edit}
+      end
+    end
+  end
+
+
   private 
     def script_step_params
       params.fetch(:script_step, {}).permit(:script_name, :name_step)

@@ -1,2 +1,29 @@
 <h1>ScriptSteps#show</h1>
-<p>Find me in app/views/script_steps/show.html.erb</p>
+<p>Find me in app/views/script_step/show.html.erb</p>
+<p>
+  <strong>Script name:</strong>
+  <%= @script_step.script_name %>
+</p>
+
+<p>
+  <strong>Name step:</strong>
+  <%= @script_step.name_step %>
+</p>
+<p>
+  <strong>Exec Script:</strong>
+  <%= link_to "exec_script" + @script_step.exec_script.id.to_s, exec_script_path(@script_step.exec_script) %>
+</p>
+<p>
+  <strong>Script Description:</strong>
+  <%= link_to "all_scripts_description" + @script_step.all_scripts_description.id.to_s, all_scripts_description_path(@script_step.all_scripts_description) %>
+</p>
+
+<p>
+  <strong>Steps:</strong>
+  <%=  render :partial => 'steps/steps', locals: {steps: @script_step.steps} %>
+  <%=  render :partial => 'steps/steps', locals: {steps: @script_step.steps} %>
+</p>
+
+
+
+<%= link_to 'Back', script_steps_path %>
