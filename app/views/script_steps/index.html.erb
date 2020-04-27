@@ -30,6 +30,7 @@
 
         <td><%= link_to "Show", script_step %></td>
         <td><%= link_to "Edit", edit_script_step_path(script_step) %></td>
+<!--        <td><%#= link_to "Add step", add_step_script_step_path(script_step) %></td>-->
         <td><%= link_to "Destroy",script_step, method: :delete, data: { confirm: "Are you sure?" } %></td>
       </tr>
     <% end %>
@@ -37,5 +38,4 @@
 </table>
 
 <br>
-
 <%= link_to "New script step", new_script_step_path %>
