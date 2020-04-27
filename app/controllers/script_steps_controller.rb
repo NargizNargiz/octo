@@ -58,7 +58,7 @@ class ScriptStepsController < ApplicationController
   def destroy
     ScriptStep.find(params[:id]).delete
   end
-  
+
   def add_step
   end
 
