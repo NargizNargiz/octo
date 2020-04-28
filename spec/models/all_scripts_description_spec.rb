@@ -5,9 +5,12 @@ RSpec.describe AllScriptsDescription, type: :model do
  
  context "validation tests" do
  	before :each do
- 		
- 		@script_description = AllScriptsDescription.new(name_script: "QWERTY", steps: "s1,s2,s3,s4,s5")
+ 		@script_description = AllScriptsDescription.new(name_script: "QWERTY", steps: "ss sff srrr svvv sgfgf")
+ 		# @script_description = AllScriptsDescription.new()
+ 		# @script_description.name_script = "qwe"
+ 		@script_description.steps = "sss ff dsd sdds dffs"
  	end
+
  	it "should be valid" do
  		expect(@script_description.valid?).to eq(true)
  	end
@@ -19,6 +22,7 @@ RSpec.describe AllScriptsDescription, type: :model do
  		@script_description.steps = "     "
  		expect(@script_description.valid?).to eq(false)
  	end
+ 	
  	it "name_script should be unique" do
  		duplicate_script = @script_description.dup
  		duplicate_script.name_script = @script_description.name_script.upcase
