@@ -1,0 +1,16 @@
+# require '../../../octoshell-my-app/app/services/add_user_script'
+
+class RunScriptService
+  def initialize
+    super
+  end
+
+  def set_connection
+    script = AddUserScript.new
+    script.run
+    # unless script.failed_steps.empty?
+    #
+    # end
+  end
+
+end
