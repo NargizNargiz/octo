@@ -1,10 +1,10 @@
 class AddUserScript
-  attr_accessor :failed_steps, :name_script, :steps
-  def initialize
+  attr_accessor :failed_steps, :name, :steps
+  def initialize(name)
+    @name = name
     @steps = []
     @failed_steps = {}
   end
-
   def set_connection(steps_params)
     run
     # run(steps_params)
@@ -38,14 +38,12 @@ class AddUserScript
       @failed_steps[:check_user] = generate_error("check_user")
       generate_error
     else
-      if rand(2) == 0 # нет user => создать user
-        if create_user == -1
-          @failed_steps[:check_user] = generate_error("check_user")
-          generate_error
-        end
+      if rand(2) == 0  && create_user == -1# нет user => создать user
+        @failed_steps[:check_user] = generate_error("check_user")
+        generate_error
       else
-          generate_ok("check_user")
-          add_user_to_group
+        generate_ok("check_user")
+        add_user_to_group
       end
     end
   end
@@ -88,7 +86,7 @@ class AddUserScript
     end
   end
 
-  def reload_script()
+  def reload_script
     @steps = []
     @failed_steps = {}
   end
@@ -102,14 +100,14 @@ class AddUserScript
     unless step == nil
       puts "#{step} failed"
     end
-      -1
+    -1
   end
 
   def generate_ok(step = nil)
     unless step == nil
       puts "#{step} success"
     end
-      1
+    1
   end
 end
 
