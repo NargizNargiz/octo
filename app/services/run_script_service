@@ -1,16 +1,32 @@
-# require '../../../octoshell-my-app/app/services/add_user_script'
+# require 'add_user_script'
+
 
 class RunScriptService
-  def initialize
-    super
+  attr_accessor :script, :name
+  def initialize(name)
+    @name = name
   end
 
   def set_connection
-    script = AddUserScript.new
-    script.run
-    # unless script.failed_steps.empty?
-    #
-    # end
+    @script = AddUserScript.new(@name)
+    @script.name = @name
+    @script.run
+  end
+  def table_fill_exec_scr
+    exec_scr = ExecScript.find_by(script_name: @name)
+
+    upd_rollbacks = exec_scr.rollbacks + 1
+    exec_scr.update(rollbacks: upd_rollbacks)
+  end
+
+  def table_fill_scr_step
+    script_st = ScriptStep.find_by(script_name: @name)
+    for step in @script.failed_steps.stringify_keys.keys do
+      step_obj = Step.create(name_step: step, name_script: @name, status:0,
+                             rollbacks: script_st.exec_script.rollbacks,
+                             exec_script: script_st.exec_script)
+      script_st.steps << step_obj
+    end
   end
 
 end
