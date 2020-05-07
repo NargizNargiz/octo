@@ -50,16 +50,16 @@ class ExecScriptsController < ApplicationController
     ExecScript.find(params[:id]).delete
   end
 
-def update
-    @exec_script = ExecScript.find(params[:id])
-    respond_to do |format|
-      if @exec_script.update(exec_script_params)
-        format.html{redirect_to @exec_script, notice: 'Script was successfully updated.'}
-      else
-        format.html{render :edit}
+  def update
+      @exec_script = ExecScript.find(params[:id])
+      respond_to do |format|
+        if @exec_script.update(exec_script_params)
+          format.html{redirect_to @exec_script, notice: 'Script was successfully updated.'}
+        else
+          format.html{render :edit}
+        end
       end
-    end
-end
+  end
 
 
   private
