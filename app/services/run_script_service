@@ -7,25 +7,57 @@ class RunScriptService
     @name = name
   end
 
+
   def set_connection
     @script = AddUserScript.new(@name)
-    @script.name = @name
+    # @script.name = @name
     @script.run
+    update_exec_script_table
+    update_steps_table
+    update_script_steps_table
   end
-  def table_fill_exec_scr
+
+  def update_exec_script_table
+    all_scripts_descs = AllScriptsDescription.find_by(name_script: @name)
     exec_scr = ExecScript.find_by(script_name: @name)
+    unless exec_scr
+      exec_scr = ExecScript.create(script_name: all_scripts_descs.name_script,
+					rollbacks: 0,
+					limit_errors: 5,
+					success:0)
+    end
 
     upd_rollbacks = exec_scr.rollbacks + 1
     exec_scr.update(rollbacks: upd_rollbacks)
+    script_st = ScriptStep.find_by(script_name: @name)
+    unless script_st
+      ScriptStep.create(script_name: exec_scr.script_name, name_step: "step", exec_script: exec_scr, all_scripts_description: all_scripts_descs)
+    end
   end
 
-  def table_fill_scr_step
+  def update_steps_table
     script_st = ScriptStep.find_by(script_name: @name)
-    for step in @script.failed_steps.stringify_keys.keys do
-      step_obj = Step.create(name_step: step, name_script: @name, status:0,
-                             rollbacks: script_st.exec_script.rollbacks,
-                             exec_script: script_st.exec_script)
-      script_st.steps << step_obj
+    for step in @script.steps do
+      step_from_bd = Step.find_by(name_step: step)
+      unless step_from_bd
+        Step.create(name_step: step, name_script: @name, status:0,
+                               rollbacks: script_st.exec_script.rollbacks,
+                               exec_script: script_st.exec_script)
+      end
+      step_from_bd = Step.find_by(name_step: step)
+      if @script.success_steps.include?(step_from_bd.name_step)
+          step_from_bd.update(status: 1)
+      else
+          step_from_bd.update(status: 0)
+      end
+    end
+  end
+
+  def update_script_steps_table
+    script_st = ScriptStep.find_by(script_name: @name)
+    for step in @script.steps do
+        step_obj = Step.find_by(name_step: step)
+        script_st.steps << step_obj
     end
   end
 
