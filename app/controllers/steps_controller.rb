@@ -29,7 +29,9 @@ class StepsController < ApplicationController
   def show
   	@step = Step.find(params[:id])
   end
-  
+  def destroy
+    Step.find(params[:id]).delete
+  end
   def update
     @step = Step.find(params[:id])
     respond_to do |format|
