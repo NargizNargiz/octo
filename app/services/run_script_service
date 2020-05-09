@@ -11,10 +11,17 @@ class RunScriptService
   def set_connection
     @script = AddUserScript.new(@name)
     # @script.name = @name
-    @script.run
-    update_exec_script_table
-    update_steps_table
-    update_script_steps_table
+
+    while true
+      @script.run
+      update_exec_script_table
+      update_steps_table
+      update_script_steps_table
+      if @script.steps - @script.success_steps == []
+        break
+      end
+    end
+
   end
 
   def update_exec_script_table
@@ -26,7 +33,6 @@ class RunScriptService
 					limit_errors: 5,
 					success:0)
     end
-
     upd_rollbacks = exec_scr.rollbacks + 1
     exec_scr.update(rollbacks: upd_rollbacks)
     script_st = ScriptStep.find_by(script_name: @name)
@@ -59,6 +65,16 @@ class RunScriptService
         step_obj = Step.find_by(name_step: step)
         script_st.steps << step_obj
     end
+    if script_st.steps.map(&:status).all?("1")
+      script_st.exec_script.update(success:1)
+    end
   end
-
 end
+
+# rails s
+# cd app/services
+# rails c
+# load "add_user_script"
+# load "run_script_service"
+# scr = RunScriptService.new("add_user")
+# scr.set_connection
