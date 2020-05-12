@@ -59,6 +59,12 @@ class ScriptStepsController < ApplicationController
     ScriptStep.find(params[:id]).delete
   end
 
+  def run_script
+    @script_step = ScriptStep.find(params[:id])
+    script = RunScriptService.new(@script_step.script_name)
+    script.once_run_script
+  end
+
   def add_step
   end
 
