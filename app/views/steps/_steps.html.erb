@@ -1,10 +1,6 @@
+<td>
 <% steps.each do |step| %>
-      <!-- <tr> -->
-        <p><%= link_to step.name_step, step_path(step) %></p>
-        <!-- <td><%= step.name_step %></td>
-        <td><%= step.name_script %></td>
-        <td><%= step.status %></td>
-        <td><%= step.rollbacks %></td>
- -->
-      <!-- </tr> -->
+  <%= link_to step.name_step, step_path(step) %>
+  <br>
 <% end %>
+</td>
