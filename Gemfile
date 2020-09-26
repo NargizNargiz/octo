@@ -69,6 +69,7 @@ gem "pack",           path: "engines/pack"
 gem "hardware",       path: "engines/hardware"
 gem "reports",       path: "engines/reports"
 gem "api",            path: "engines/api"
+gem 'script_executor', path: 'engines/script_executor'
 
 gem "jquery-rails"
 gem "jquery-ui-rails"
@@ -97,5 +98,3 @@ group :test do
   gem "phantomjs", github: "colszowka/phantomjs-gem"
   gem "codeclimate-test-reporter", require: false
 end
-
-gem 'script_executor', path: 'script_executor'

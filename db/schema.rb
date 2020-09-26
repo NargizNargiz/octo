@@ -867,6 +867,41 @@ ActiveRecord::Schema.define(version: 2020_05_15_110709) do
     t.boolean "receive_special_mails", default: true
   end
 
+  create_table "script_executor_all_scripts_descriptions", id: :serial, force: :cascade do |t|
+    t.string "name_script"
+    t.text "steps"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "script_executor_exec_scripts", id: :serial, force: :cascade do |t|
+    t.string "script_name"
+    t.integer "success"
+    t.integer "limit_errors"
+    t.integer "rollbacks"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "script_executor_script_steps", id: :serial, force: :cascade do |t|
+    t.integer "exec_script_id"
+    t.string "script_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer "all_scripts_description_id"
+  end
+
+  create_table "script_executor_steps", id: :serial, force: :cascade do |t|
+    t.string "name_step"
+    t.string "name_script"
+    t.string "status"
+    t.integer "rollbacks"
+    t.integer "script_step_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer "exec_script_id"
+  end
+
   create_table "sessions_projects_in_sessions", id: :serial, force: :cascade do |t|
     t.integer "session_id"
     t.integer "project_id"

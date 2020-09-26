@@ -7,11 +7,11 @@ require "script_executor/version"
 Gem::Specification.new do |spec|
   spec.name        = "script_executor"
   spec.version     = ScriptExecutor::VERSION
-  spec.authors     = ["Кемпирова Наргиз"]
-  spec.email       = ["nkempirova@phoenixit.ru"]
-  spec.homepage    = "TODO"
-  spec.summary     = "TODO: Summary of ScriptExecutor."
-  spec.description = "TODO: Description of ScriptExecutor."
+  spec.authors     = ["Kempirova Nargiz"]
+  spec.email       = ["nargiz1397@mail.ru"]
+  spec.homepage    = "https://github.com/octoshell/octoshell-v2"
+  spec.summary     = "Step by step script execution"
+  spec.description = "Description of ScriptExecutor"
   spec.license     = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'

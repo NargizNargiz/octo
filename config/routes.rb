@@ -750,6 +750,7 @@ Octoshell::Application.routes.draw do
 
   mount Pack::Engine, at: "/pack"
   # mount Announcements::Engine, :at => "/announcements"
+  mount ScriptExecutor::Engine, at: "/script_executor"
 
   Octoface::OctoConfig.instances.each do |instance|
     instance_eval &instance.routes_block if instance.routes_block
