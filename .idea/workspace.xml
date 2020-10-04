@@ -2,8 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba4ff985-4edd-412b-9ca5-b47d148b1583" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/engines/script_executor/app/assets/javascripts/script_executor/exec_scripts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/script_executor/app/assets/stylesheets/script_executor/exec_scripts.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/script_executor/app/services/step/create.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/script_executor/app/services/step/rerun.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/script_executor/app/services/step/run.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.generators" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.generators" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engines/script_executor/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/engines/script_executor/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/config/manifest.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/config/manifest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engines/script_executor/app/controllers/script_executor/all_scripts_descriptions_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/engines/script_executor/app/controllers/script_executor/all_scripts_descriptions_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engines/script_executor/app/controllers/script_executor/exec_scripts_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/engines/script_executor/app/controllers/script_executor/exec_scripts_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engines/script_executor/app/controllers/script_executor/script_steps_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/engines/script_executor/app/controllers/script_executor/script_steps_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engines/script_executor/app/controllers/script_executor/steps_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/engines/script_executor/app/controllers/script_executor/steps_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engines/script_executor/app/models/script_executor/all_scripts_description.rb" beforeDir="false" afterPath="$PROJECT_DIR$/engines/script_executor/app/models/script_executor/all_scripts_description.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engines/script_executor/app/models/script_executor/exec_script.rb" beforeDir="false" afterPath="$PROJECT_DIR$/engines/script_executor/app/models/script_executor/exec_script.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engines/script_executor/app/models/script_executor/script_step.rb" beforeDir="false" afterPath="$PROJECT_DIR$/engines/script_executor/app/models/script_executor/script_step.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engines/script_executor/app/models/script_executor/step.rb" beforeDir="false" afterPath="$PROJECT_DIR$/engines/script_executor/app/models/script_executor/step.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engines/script_executor/app/views/script_executor/steps/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/engines/script_executor/app/views/script_executor/steps/index.html.erb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,17 +38,18 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/job/marlin-new" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.ruby.settings.RubyActiveModuleSdkConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/engines/script_executor/app/assets/javascripts/script_executor" />
       <recent name="$PROJECT_DIR$/engines" />
     </key>
   </component>
@@ -151,7 +167,11 @@
       <workItem from="1600289679786" duration="1178000" />
       <workItem from="1600961988746" duration="992000" />
       <workItem from="1600963654192" duration="14857000" />
-      <workItem from="1601201873711" duration="3693000" />
+      <workItem from="1601201873711" duration="10944000" />
+      <workItem from="1601313690485" duration="7452000" />
+      <workItem from="1601406896760" duration="191000" />
+      <workItem from="1601565657515" duration="599000" />
+      <workItem from="1601796951793" duration="777000" />
     </task>
     <servers />
   </component>
@@ -163,21 +183,29 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="705" y="345" width="662" height="423" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1601116150875" />
-    <state x="482" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1601116144417">
+    <state x="776" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1601400507955">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="482" y="188" width="1022" height="737" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1601116144417" />
-    <state x="607" y="245" width="762" height="623" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1600964548951">
+    <state x="776" y="311" width="424" height="491" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1601400507955" />
+    <state x="482" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1601400368186">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="607" y="245" width="762" height="623" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1600964548951" />
-    <state x="67" y="27" width="1305" height="996" key="dock-window-1" timestamp="1601117446216">
+    <state x="482" y="188" width="1022" height="737" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1601400368186" />
+    <state x="607" y="245" width="762" height="623" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1601321425731">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="67" y="27" width="1305" height="996" key="dock-window-1/67.27.1853.1053@67.27.1853.1053" timestamp="1601117446216" />
-    <state x="685" y="138" width="722" height="831" key="find.popup" timestamp="1601207043718">
+    <state x="607" y="245" width="762" height="623" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1601321425731" />
+    <state x="67" y="27" width="1336" height="997" key="dock-window-1" timestamp="1601315453833">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="685" y="138" width="722" height="831" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1601207043718" />
+    <state x="67" y="27" width="1336" height="997" key="dock-window-1/67.27.1853.1053@67.27.1853.1053" timestamp="1601315453833" />
+    <state x="685" y="138" width="722" height="831" key="find.popup" timestamp="1601328757218">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="685" y="138" width="722" height="831" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1601328757218" />
+    <state x="656" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1601402628207">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="656" y="259" width="672" height="678" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1601402628207" />
   </component>
 </project>
