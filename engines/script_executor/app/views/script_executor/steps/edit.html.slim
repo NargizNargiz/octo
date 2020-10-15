@@ -1,0 +1,22 @@
+= form_for(@step) do |f|
+  label
+    | Name script:
+  br
+  = f.text_field :name_script
+  br
+  label
+    | Name step
+  br
+  = f.text_field :name_step
+  br
+  label
+    | Status
+  br
+  = f.number_field :status
+  br
+  label
+    | Rollbacks
+  br
+  = f.number_field :rollbacks
+  br
+  = f.submit
