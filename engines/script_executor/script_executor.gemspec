@@ -16,19 +16,32 @@ Gem::Specification.new do |spec|
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
-  if spec.respond_to?(:metadata)
-    spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
-  else
-    raise "RubyGems 2.0 or newer is required to protect against " \
-      "public gem pushes."
-  end
 
   spec.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
+  spec.test_files = Dir["spec/**/*"]
+  spec.platform = 'java' if RUBY_ENGINE == 'jruby'
 
   spec.add_dependency "rails", "~> 5.2.4", ">= 5.2.4.3"
 
   spec.add_development_dependency "sqlite3"
   spec.add_dependency "aasm"
-  spec.add_development_dependency 'rspec-rails'
+  spec.add_dependency 'rspec-rails'
+  spec.add_dependency 'railroady'
+  # spec.add_development_dependency 'web-console'
+    # , '>= 3.3.0'
+  spec.add_dependency 'listen'
+  # spec.add_development_dependency 'spring'
+  # spec.add_development_dependency 'spring-watcher-listen', '~> 2.0.0'
+  spec.add_dependency 'bootsnap', '>= 1.1.0'
+  # spec.add_development_dependency 'jbuilder', '~> 2.5'
+  # spec.add_development_dependency 'sass-rails', '~> 5.0'
+  spec.add_dependency 'uglifier', '>= 1.3.0'
+  spec.add_dependency 'turbolinks', '~> 5'
+  spec.add_dependency 'puma'
+  # spec.add_development_dependency 'faker'
+  # spec.add_development_dependency 'tzinfo-data'
+  spec.add_dependency "factory_bot_rails"
+  spec.add_dependency 'byebug'
+  spec.add_dependency 'pry'
   spec.test_files = Dir["spec/**/*"]
 end

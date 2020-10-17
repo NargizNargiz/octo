@@ -14,7 +14,6 @@ require "sprockets/railtie"
 # require "rails/test_unit/railtie"
 
 Bundler.require(*Rails.groups)
-require "script_executor1"
 
 module Dummy
   class Application < Rails::Application
