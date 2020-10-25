@@ -1,0 +1,22 @@
+h1
+  ' Шаг:
+  = @step.name_step
+  '  скрипта:
+  = @step.name_script
+p
+  strong
+    ' Name Step:
+  = @step.name_step
+p
+  strong
+    ' Name Script:
+  = @step.name_script
+p
+  strong
+    ' Status:
+  = @step.status
+p
+  strong
+    ' Rollbacks:
+  = @step.rollbacks
+= link_to 'Back', script_step_steps_path

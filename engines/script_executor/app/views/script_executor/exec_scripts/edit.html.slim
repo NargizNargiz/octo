@@ -1,0 +1,11 @@
+= bootstrap_nested_form_for(@exec_script) do |f|
+  br
+  = f.text_field :script_name
+  br
+  = f.number_field :rollbacks
+  br
+  = f.number_field :limit_errors
+  br
+  = f.number_field :success
+  br
+  = f.submit 'Сохранить'

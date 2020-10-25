@@ -1,0 +1,21 @@
+h1
+  | Новый шаг
+= form_with scope: :step, url: script_step_steps_path, local: true do |form|
+  p
+    = form.label :name_step
+    br
+    = form.text_field :name_step
+  p
+    = form.label :name_script
+    br
+    = form.text_field :name_script
+  p
+    = form.label :status
+    br
+    = form.number_field :status
+  p
+    = form.label :rollbacks
+    br
+    = form.number_field :rollbacks
+  p
+    = form.submit 'Сохранить'

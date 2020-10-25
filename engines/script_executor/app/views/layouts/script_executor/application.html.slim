@@ -1,0 +1,11 @@
+doctype html
+html
+  head
+    title
+      | Script executor
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag    "script_executor/application", media: "all"
+    = javascript_include_tag "script_executor/application"
+  body
+    = yield

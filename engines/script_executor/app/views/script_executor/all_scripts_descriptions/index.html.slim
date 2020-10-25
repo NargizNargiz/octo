@@ -1,0 +1,25 @@
+h1
+  | Список скриптов
+table class="table table-bordered table-striped"
+  thead
+    tr
+      th
+        | Name Script
+      th
+        | Steps
+      th[colspan="3"]
+  tbody
+    - @all_scripts_descriptions.each do |all_scripts_description|
+      tr
+        td
+          = all_scripts_description.name_script
+        td
+          = all_scripts_description.steps
+        td
+          = link_to "Show", all_scripts_description
+        td
+          = link_to "Edit", edit_all_scripts_description_path(all_scripts_description)
+        td
+          = link_to "Destroy",all_scripts_description, method: :delete, data: { confirm: "Are you sure?" }
+br
+= link_to "New script description", new_all_scripts_description_path
