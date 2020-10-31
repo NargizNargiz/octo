@@ -7,7 +7,8 @@ module ScriptExecutor
  		 validates :name_script, presence: true 
  		 # validates :status, presence: true
  		 validates :rollbacks, presence: true, numericality: {only_integer: true, greater_than_or_equal_to: 0} 
- 		 belongs_to :exec_script 
+ 		 belongs_to :exec_script
+		 belongs_to :script
  		 accepts_nested_attributes_for  :exec_script
 
 		 aasm column: 'status', enum: true do

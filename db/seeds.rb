@@ -101,11 +101,10 @@
   Comments.create_wiki_page
   Comments.create_abilities
 
-  all_scripts_description = FactoryBot.create(:all_scripts_description)
+  description = FactoryBot.create(:description)
   exec_script = FactoryBot.create(:exec_script)
-  script = FactoryBot.create(:script_step, all_scripts_description: all_scripts_description, exec_script: exec_script)
-
+  script = FactoryBot.create(:script, description: description, exec_script: exec_script)
 
   5.times do
-    script.steps << FactoryBot.create(:step)
+    script.steps << FactoryBot.create(:step, exec_script: exec_script)
   end
