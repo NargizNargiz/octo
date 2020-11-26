@@ -1,18 +1,14 @@
 h1
   | Создание нового скрипта
 p
-= form_with scope: :script_step, url: script_steps_path, local: true do |form|
+= form_with scope: :script, url: scripts_path, local: true do |form|
   p
     ' Выберете скрипт из списка существующих
   p
     = form.label :script_name
-  / br
   p
-    / = form.text_field :script_name
-    = select_tag(:script_name, options_for_select(@script_options))
-  p
-    = form.label :name_step
-    br
-    = form.text_field :name_step
+    / = select_tag(:description_id, options_for_select(@script_options))
+    / collection_select(:post, :author_id, Author.all, :id, :name, prompt: true)
+    = form.collection_select(:description_id, ScriptExecutor::Description.all, :id, :name_script, prompt: true)
   p
     = form.submit

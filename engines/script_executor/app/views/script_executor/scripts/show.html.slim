@@ -37,7 +37,10 @@ table class="table table-bordered table-striped"
       td
         = @script.script_name
       td
-        = link_to "exec_script" + @script.exec_script.id.to_s, exec_script_path(@script.exec_script)
+        - if @script.exec_script.present?
+          = link_to "exec_script" + @script.exec_script.id.to_s, exec_script_path(@script.exec_script)
+        - else
+          | Запущенных скирптов нет
         = render :partial => 'script_executor/steps/steps1', locals: {script: @script}
       td
         = link_to "Edit", edit_script_path(@script)

@@ -9,12 +9,12 @@ table class="table table-bordered table-striped"
       th
         | Откатывания
   tbody
-    - script_step.steps.each do |step|
+    - script.steps.each do |step|
       tr
         td
-          = link_to step.name_step, script_step_step_path(id: step.id, script_step_id: step.script_step_id)
+          = link_to step.name_step, script_step_path(id: step.id, script_id: step.script_id)
         td
           = step.status
         td
           = step.rollbacks
-= link_to 'Показать подробнее', script_step_steps_path(script_step)
+= link_to 'Показать подробнее', script_steps_path(script)

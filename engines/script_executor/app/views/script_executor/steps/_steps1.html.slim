@@ -1,6 +1,6 @@
 td
-  - script_step.steps.each do |step|
-    = link_to step.name_step, script_step_step_path(id: step.id, script_step_id: step.script_step_id)
+  - script.steps.each do |step|
+    = link_to step.name_step, script_step_path(id: step.id, script_id: step.script_id)
     br
   br
-  = link_to 'Показать подробнее', script_step_steps_path(script_step)
+  = link_to 'Показать подробнее', script_steps_path(script)

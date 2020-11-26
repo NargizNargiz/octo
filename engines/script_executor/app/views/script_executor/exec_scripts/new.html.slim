@@ -1,21 +1,39 @@
 h1
   | ExecScripts#new
+/ = form_with scope: :exec_script, url: exec_scripts_path, local: true do |form|
+/   p
+/     = form.label :script_name
+/     br
+/     = form.text_field :script_name
+/   p
+/     = form.label :rollbacks
+/     br
+/     = form.number_field :rollbacks
+/   p
+/     = form.label :limit_errors
+/     br
+/     = form.number_field :limit_errors
+/   p
+/     = form.label :success
+/     br
+/     = form.number_field :success
+/   p
+/     = form.submit
+
+h1
+    | Запуск скрипта
+p
 = form_with scope: :exec_script, url: exec_scripts_path, local: true do |form|
   p
-    = form.label :script_name
-    br
-    = form.text_field :script_name
+    ' Выберете скрипт из списка существующих
   p
-    = form.label :rollbacks
-    br
-    = form.number_field :rollbacks
+    = form.label :script_name
+  p
+    = form.collection_select(:script_id, ScriptExecutor::Script.all, :id, :script_name, prompt: true)
+    / = select_tag(:script_id, options_for_select(@script_options))
   p
     = form.label :limit_errors
     br
     = form.number_field :limit_errors
-  p
-    = form.label :success
-    br
-    = form.number_field :success
   p
     = form.submit

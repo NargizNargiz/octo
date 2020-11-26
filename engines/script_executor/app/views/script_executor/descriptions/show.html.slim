@@ -1,12 +1,12 @@
 h1
   ' Скрипт:
-  = @all_scripts_description.name_script
+  = @description.name_script
 p
   strong
     ' Название скрипта:
-  = @all_scripts_description.name_script
+  = @description.name_script
 p
   strong
     ' Основные шаги:
-  = @all_scripts_description.steps
-= link_to 'Вернуться назад', all_scripts_descriptions_path
+  = @description.steps
+= link_to 'Вернуться назад', descriptions_path

@@ -25,7 +25,7 @@ table class="table table-bordered table-striped"
         td
           = exec_script.success
         td
-          = link_to "Show", script_step_path(ScriptExecutor::ScriptStep.find_by(exec_script_id: exec_script.id))
+          = link_to "Show", script_path(exec_script.script)
         td
           = link_to "Edit", edit_exec_script_path(exec_script)
         td
