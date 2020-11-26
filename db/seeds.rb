@@ -106,5 +106,6 @@
   script = FactoryBot.create(:script, description: description, exec_script: exec_script)
 
   5.times do
-    script.steps << FactoryBot.create(:step, exec_script: exec_script)
+    script.steps << FactoryBot.create(:step, exec_script: exec_script, previous_result_need: false, result: {})
   end
+  description_1 = Description.create('Посмотреть содержимое папки')

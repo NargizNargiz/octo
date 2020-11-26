@@ -22,7 +22,7 @@
 
 h1
   ' Скрипт
-  = @script_step.script_name
+  = @script.script_name
 table class="table table-bordered table-striped"
   thead
     tr
@@ -35,14 +35,14 @@ table class="table table-bordered table-striped"
   tbody
     tr
       td
-        = @script_step.script_name
+        = @script.script_name
       td
-        = link_to "exec_script" + @script_step.exec_script.id.to_s, exec_script_path(@script_step.exec_script)
-        = render :partial => 'script_executor/steps/steps1', locals: {script_step: @script_step}
+        = link_to "exec_script" + @script.exec_script.id.to_s, exec_script_path(@script.exec_script)
+        = render :partial => 'script_executor/steps/steps1', locals: {script: @script}
       td
-        = link_to "Edit", edit_script_step_path(@script_step)
+        = link_to "Edit", edit_script_path(@script)
       td
-        = button_to "Run Script", run_script_exec_script_path(@script_step)
+        = button_to "Run Script", run_script_exec_script_path(@script)
 
   br
-= link_to "Добавить новый шаг", new_script_step_path
+= link_to "Добавить новый шаг", new_script_path

@@ -1,0 +1,18 @@
+h1
+  | Создание нового скрипта
+p
+= form_with scope: :script_step, url: script_steps_path, local: true do |form|
+  p
+    ' Выберете скрипт из списка существующих
+  p
+    = form.label :script_name
+  / br
+  p
+    / = form.text_field :script_name
+    = select_tag(:script_name, options_for_select(@script_options))
+  p
+    = form.label :name_step
+    br
+    = form.text_field :name_step
+  p
+    = form.submit

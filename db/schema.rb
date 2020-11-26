@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_31_174861) do
+ActiveRecord::Schema.define(version: 2020_11_19_101452) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -869,16 +869,16 @@ ActiveRecord::Schema.define(version: 2020_10_31_174861) do
 
   create_table "script_executor_descriptions", force: :cascade do |t|
     t.string "name_script"
-    t.text "steps"
+    t.jsonb "steps"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "script_executor_exec_scripts", force: :cascade do |t|
     t.string "script_name"
-    t.boolean "success"
+    t.boolean "success", default: false
     t.integer "limit_errors"
-    t.integer "rollbacks"
+    t.integer "rollbacks", default: 0
     t.bigint "script_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -902,6 +902,10 @@ ActiveRecord::Schema.define(version: 2020_10_31_174861) do
     t.bigint "exec_script_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.jsonb "actions", default: []
+    t.integer "order"
+    t.boolean "previous_result_need"
+    t.jsonb "result"
     t.index ["exec_script_id"], name: "index_script_executor_steps_on_exec_script_id"
     t.index ["script_id"], name: "index_script_executor_steps_on_script_id"
   end

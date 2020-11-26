@@ -1,0 +1,33 @@
+h1
+  | Список скриптов
+table class="table table-bordered table-striped"
+  thead
+    tr
+      th
+        | Name_Script
+      th
+        | Steps
+      th
+        | Exec_Script
+      th
+        | All_scripts_description
+      th[colspan="3"]
+  tbody
+    - @script.each do |script|
+      tr
+        td
+          = script.script_name
+        td
+          = render :partial => 'script_executor/steps/steps', locals: { script: script }
+        td
+          = link_to "description" + script.description.id.to_s, description_path(script.description)
+        td
+          = link_to "Show", script_path(script)
+        td
+          = link_to "Edit", edit_script_path(scrip)
+        td
+          = link_to "Destroy",script, method: :delete, data: { confirm: "Are you sure?" }
+        td
+          = button_to "Run Script", run_script_exec_script_path(script_step)
+br
+= link_to "Добавить новый шаг", new_script_path
