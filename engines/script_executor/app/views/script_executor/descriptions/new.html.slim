@@ -11,3 +11,13 @@ h1
     = form.text_area :steps
   p
     = form.submit
+
+/ = form_with scope: :description, url: descriptions_path, local: true do |form|
+= form_with(model: @description, local: true) do |form|
+  = form.label 'description[steps][name]', 'Body'
+  = form.text_area_tag 'description[steps][name]', @description.steps['name']
+  = label_tag 'description[steps][order]', 'Text'
+  = text_field_tag 'description[steps][order]', @description.steps['order']
+  / = @description.steps['actions'].each do |item|
+  /   = label_tag 'description[steps][][text]', 'Item'
+  /   = text_field_tag 'description[steps][][text]', action['text']

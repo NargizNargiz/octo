@@ -1,0 +1,19 @@
+/ = f.label :steps
+/ = f.fields_for :steps do |step_form|
+/   = render 'step_fields', f: step_form
+/
+
+= bootstrap_nested_form_for(@description) do |f|
+  - if @description.errors.any?
+    #error_explanation
+      h2
+        = pluralize(@description.errors.count, "error")
+        | prohibited this wine from being saved:
+      ul
+        - @description.errors.full_messages.each do |message|
+          li= message
+  .field
+    = f.fields_for :steps do |step_form|
+      = render 'step_fields', f: step_form
+  .actions
+    = f.submit 'Добавить шаг'

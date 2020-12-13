@@ -1,0 +1,26 @@
+table class="table table-bordered table-striped"
+  thead
+    tr
+      th
+        | Step
+      th
+        | Status
+      th
+        | Rollbacks
+      th
+        | Result
+      th[colspan="3"]
+  tbody
+    - @script.steps.each do |step|
+      tr
+        td
+          = link_to step.name_step, script_step_path(step)
+        td
+          = step.status
+        td
+          = step.rollbacks
+        td
+          = step.result
+        br
+td
+  = link_to 'Вернутья к скрипту', script_path(@script)

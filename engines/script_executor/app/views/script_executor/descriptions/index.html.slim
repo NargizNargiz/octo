@@ -18,8 +18,9 @@ table class="table table-bordered table-striped"
         td
           = link_to "Show", description
         td
-          = link_to "Edit", description_path(description)
+          = link_to "Edit", edit_description_path(description)
         td
           = link_to "Destroy", description, method: :delete, data: { confirm: "Are you sure?" }
+        = javascript_tag 'my_js'
 br
 = link_to "New script description", new_description_path
