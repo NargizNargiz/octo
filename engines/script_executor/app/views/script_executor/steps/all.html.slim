@@ -24,10 +24,8 @@ table class="table table-bordered table-striped"
         td
           = step.result
         td
-          = link_to "Show", script_step_path(script_id: step.script.id, id: step.id)
+          / = link_to "Show", script_step_path(script_id: step.script.id, id: step.id)
         td
-          = link_to "Edit", edit_script_step_path(step.script, step)
-        td
-          = link_to "Destroy",script_step_path(id: step.id), method: :delete, data: { confirm: "Are you sure?" }
+          = link_to "Edit", edit_step_path(step.script, step)
 br
-= link_to "Добавить шаг", new_script_step_path
+/ = link_to "Добавить шаг", new_script_step_path

@@ -1,0 +1,19 @@
+/ h1
+/   | Запуск скрипта
+/ p
+/ = form_with scope: :script, url: create_exec_script_script_path, local: true do |form|
+/   p
+/     ' Вы запускаете скрипт
+/     = @script.script_name
+/   p
+/     = form.label 'Выберите допустимое количство ошибок скрипта(после достижения порогового значения скрипт не будет перезапускаться)'
+/     br
+/     = form.number_field :limit_errors
+/   p
+/     = form.submit 'Запустить скрипт'
+/     / = render :partial => 'script_executor/scripts/run_script', locals: { script: @script }
+
+h1
+  | ScriptSteps#create
+p
+  | Find me in app/views/script_steps/create.html.erb

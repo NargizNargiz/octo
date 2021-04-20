@@ -1,7 +1,6 @@
 fieldset
   = f.text_field :name, placeholder: "название шага скрипта"
-  = f.text_field :order, placeholder: "номер шага по порядку при выполнении скрипта"
+  = f.number_field :order, placeholder: "номер шага по порядку при выполнении скрипта"
   = f.text_field :actions, placeholder: "действия для шага(через запятую, пример: cd dir, mkdir new_dir)"
-  = f.text_field :previous_result_need, placeholder: "если для выполнения этого шага необходим результат предыдущего - true, инчае false"
-  = f.hidden_field :_destroy
-  = link_to "remove", '#', class: "remove_fields"
+  / = f.text_field :previous_result_need, placeholder: "если для выполнения этого шага необходим результат предыдущего - true, инчае false"
+  = f.check_box 'previous_result_need', {}, 'true', 'false'

@@ -45,7 +45,7 @@ table class="table table-bordered table-striped"
       td
         = link_to "Edit", edit_script_path(@script)
       td
-        = button_to "Run Script", run_script_exec_script_path(@script)
+        = button_to "Run Script", script_executor.run_script_script_path(@script)
 
   br
 = link_to "Добавить новый шаг", new_script_path

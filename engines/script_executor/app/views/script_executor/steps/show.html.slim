@@ -3,20 +3,28 @@ h1
   = @step.name_step
   '  скрипта:
   = @step.name_script
-p
-  strong
-    ' Name Step:
-  = @step.name_step
-p
-  strong
-    ' Name Script:
-  = @step.name_script
-p
-  strong
-    ' Status:
-  = @step.status
-p
-  strong
-    ' Rollbacks:
-  = @step.rollbacks
-= link_to 'Back', script_steps_path
+table class="table table-bordered table-striped"
+  thead
+    tr
+      th
+        | Step
+      th
+        | Status
+      th
+        | Rollbacks
+      th
+        | Result
+      th[colspan="3"]
+  tbody
+    tr
+      td
+        = @step.name_step
+      td
+        = @step.status
+      td
+        = @step.rollbacks
+      td
+        = @step.result
+      br
+td
+  = link_to 'Вернутья к скрипту', script_path(@step.script)

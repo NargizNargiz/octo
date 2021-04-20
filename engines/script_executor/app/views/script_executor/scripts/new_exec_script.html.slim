@@ -1,7 +1,7 @@
 h1
   | Запуск скрипта
 p
-= form_with scope: :script, url: create_exec_script_script_path, local: true do |form|
+= form_with scope: :exec_script, url: create_exec_script_script_path, local: true do |form|
   p
     ' Вы запускаете скрипт
     = @script.script_name
@@ -11,4 +11,4 @@ p
     = form.number_field :limit_errors
   p
     = form.submit 'Запустить скрипт'
-    / = render :partial => 'script_executor/scripts/run_script', locals: { script: @script }
+      / = render :partial => 'script_executor/scripts/run_script', locals: { script: @script }

@@ -8,5 +8,26 @@ p
 p
   strong
     ' Основные шаги:
-  = @description.steps
+    table class="table table-bordered table-striped"
+      tr
+        th name
+        th order
+        th previous result need
+        th actions
+      tbody
+        - @description.steps.sort_by{ |hash| hash.order}.each_with_index do |step, index|
+          tr
+            td
+              = step.name
+            td
+              = step.order
+            td
+              = step.previous_result_need
+            td
+              = step.actions
 = link_to 'Вернуться назад', descriptions_path
+'
+'|
+= link_to 'Добавить шаг', edit_description_path(@description)
+'
+'|

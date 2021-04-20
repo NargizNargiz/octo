@@ -13,7 +13,7 @@
         - @description.errors.full_messages.each do |message|
           li= message
   .field
-    = f.fields_for :steps do |step_form|
-      = render 'step_fields', f: step_form
+    = f.fields_for :step_attribute do |f_step|
+      = render 'step_fields', f: f_step
   .actions
     = f.submit 'Добавить шаг'

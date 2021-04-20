@@ -1,0 +1,30 @@
+- script.steps.order(:order).each_with_index do |step, index|
+  - rowspan = script.steps.count.to_s
+  - if index == 0
+    tr
+      td
+        = link_to step.name_step, script_step_path(id: step.id, script_id: step.script_id)
+      td
+        = step.status
+      td
+        = step.rollbacks
+      td rowspan=rowspan
+        = link_to "description" + script.description.id.to_s, description_path(script.description)
+      td rowspan=rowspan
+        = link_to "Show", script_path(script)
+      td rowspan=rowspan
+        = link_to "Edit", edit_script_path(script)
+      td rowspan=rowspan
+        = link_to "Destroy", script, method: :delete, data: {confirm: "Are you sure?"}
+      td rowspan=rowspan
+        = link_to "Run", script_executor.new_exec_script_script_path(script)
+  - else
+    tr
+      td
+        = link_to step.name_step, script_step_path(id: step.id, script_id: step.script_id)
+      td
+        = step.status
+      td
+        = step.rollbacks
+      td
+/ script.steps.order(:order).last

@@ -1,20 +1,20 @@
-= bootstrap_nested_form_for(@script_step) do |f|
-  = for step in @script_step.all_scripts_description.steps.split(" ") do
-    = f.check_box step
-    = step
-    br
-    = check_box_  tag(step)
-    = label_tag(step, step)
-  = f.submit
-= form_for @script_step do |f|
-  = f.fields_for :step, @script_step.steps.build do |steps_fields|
-    = steps_fields.text_field :name_step
-    - unless @stepss.empty?
+/ = bootstrap_nested_form_for(@script) do |f|
+/   = for step in @script.description.steps do
+/     = f.check_box step
+/     = step
+/     br
+/     = check_box_  tag(step)
+/     = label_tag(step, step)
+/   = f.submit
+= form_for @script do |f|
+  = f.fields_for :step, @script.steps.build do |steps_fields|
+    - unless @steps.empty?
       p
-        = select_tag(:step, options_for_select(@stepss))
+      = steps_fields.text_field :name_step
+        = select_tag(:step, options_for_select(@steps))
       = f.submit
     - else
       p
         | Нет новых шагов для добавления
-      = link_to 'Back', script_steps_path
+      = link_to 'Back', scripts_path(@script)
     br

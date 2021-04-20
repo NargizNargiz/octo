@@ -1,5 +1,5 @@
 td
-  - script.steps.each do |step|
+  - script.steps.order(:order).each do |step|
     = link_to step.name_step, script_step_path(id: step.id, script_id: step.script_id)
     br
   br

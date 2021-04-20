@@ -1,23 +1,21 @@
-h1
-  | AllScriptsDescriptions#new
-= form_with scope: :description, url: descriptions_path, local: true do |form|
-  p
-    = form.label :name_script
-    br
-    = form.text_field :name_script
-  p
-    = form.label :steps
-    br
-    = form.text_area :steps
-  p
-    = form.submit
-
-/ = form_with scope: :description, url: descriptions_path, local: true do |form|
-= form_with(model: @description, local: true) do |form|
-  = form.label 'description[steps][name]', 'Body'
-  = form.text_area_tag 'description[steps][name]', @description.steps['name']
-  = label_tag 'description[steps][order]', 'Text'
-  = text_field_tag 'description[steps][order]', @description.steps['order']
-  / = @description.steps['actions'].each do |item|
-  /   = label_tag 'description[steps][][text]', 'Item'
-  /   = text_field_tag 'description[steps][][text]', action['text']
+h1 Create Description
+= bootstrap_nested_form_for(@description) do |f|
+  - if @description.errors.any?
+    #error_explanation
+      h2
+        = pluralize(@description.errors.count, "error")
+        | prohibited this wine from being saved:
+      ul
+        - @description.errors.full_messages.each do |message|
+          li= message
+    = f.text_field :name_script, placeholder: "название скрипта"
+    / @photos.each do |photo|
+    / <% f.object.photos.each do |photo| %>
+      / <%= f.fields_for photo do |photo_form| %>
+    = f.fields_for "steps" do |f_step|
+      = f_step.text_field :name_script, id: nil
+      = f_step.number_field :order, id: nil
+      = f_step.text_field :actions, placeholder: "действия для шага(через запятую, пример: cd dir, mkdir new_dir)", id: nil
+      = f_step.check_box :previous_result_need, {}, 'true', 'false'
+  .actions
+    = f.submit 'Добавить шаг'

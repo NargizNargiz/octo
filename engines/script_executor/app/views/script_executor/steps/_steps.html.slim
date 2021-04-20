@@ -3,13 +3,13 @@ table class="table table-bordered table-striped"
   thead
     tr
       th
-        | Шаг
+        | Step
       th
-        | Статус
+        | Status
       th
-        | Откатывания
+        | Rollbacks
   tbody
-    - script.steps.each do |step|
+    - script.steps.order(:order).each do |step|
       tr
         td
           = link_to step.name_step, script_step_path(id: step.id, script_id: step.script_id)
