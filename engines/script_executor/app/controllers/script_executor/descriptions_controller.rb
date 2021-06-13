@@ -2,10 +2,12 @@ module ScriptExecutor
   class DescriptionsController < ApplicationController
     def index
       @descriptions = Description.all
+      render json: @descriptions
     end
 
     def show
       @description = Description.find(params[:id])
+      render json: @description
     end
 
     def new
@@ -17,27 +19,21 @@ module ScriptExecutor
     end
 
     def create
-      # render plain: params[:all_scripts_description].inspect
-      @description = Description.new(description_params)
-      respond_to do |format|
-        if @description.save
-          format.html { redirect_to @description, notice: 'all_scripts_description was successfully created.' }
-          format.json { render :show, status: :created, location: @description }
-        else
-          format.html { render :new }
-          format.json { render json: @description.errors, status: :unprocessable_entity }
-        end
+      @description = Description.new(create_params)
+
+      if @description.save
+        render json: @description, status: :created, description: @description
+      else
+        render json: @description.errors, status: :unprocessable_entity
       end
     end
 
     def update
       @description = Description.find(params[:id])
-      respond_to do |format|
-        if @description.update(description_params)
-          format.html{redirect_to @description, notice: 'Scripts Description was successfully updated.'}
-        else
-          format.html{render :edit}
-        end
+      if @description.update(update_params)
+        render json: @description
+      else
+        render json: @description.errors, status: :unprocessable_entity
       end
     end
 
@@ -47,13 +43,13 @@ module ScriptExecutor
     #   params.fetch(:description, {}).permit(:name_script, :steps)
     # end
 
-    def post_params
-      params.require(:description)
-          .permit(steps: [:name, :order, actions: [:text]])
+
+    def update_params
+      params.require(:description).permit(:name_script, steps: [:name, :order, :previous_result_need, actions: []])
     end
 
-    def description_params
-      params.require(:description).permit(:name_script, steps_attributes: [:name, :order, :actions, :previous_result_need, :_destroy])
+    def create_params
+      params.require(:description).permit(:name_script, steps: [:name, :order, :previous_result_need, actions: [] ])
     end
   end
 end

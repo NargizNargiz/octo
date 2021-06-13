@@ -108,4 +108,22 @@
   5.times do
     script.steps << FactoryBot.create(:step, exec_script: exec_script, previous_result_need: false, result: {})
   end
-  description_1 = Description.create('Посмотреть содержимое папки')
+
+  description_1 = ScriptExecutor::Description.create(name_script: 'Посмотреть содержимое папки',
+                                                     steps: [  { name: 'Посмотреть содержимое корневой папки',
+                                                                                actions: ['ls'],
+                                                                                order: 1,
+                                                                                previous_result_need: false } ]
+                                     )
+
+  description_2 = ScriptExecutor::Description.create(name_script: 'Создать файл в директории',
+                                                     steps: [   { name: '',
+                                                                                actions: ['mkdir octoshell'],
+                                                                                order: 1,
+                                                                                previous_result_need: false } ]
+  )
+
+  script_1 = ScriptExecutor::Script.create(script_name: 'Посмотреть содержимое папки', description: description_1)
+  ScriptExecutor::Step.create(name_step: "Посмотреть содержимое корневой папки",
+                                       name_script: 'test1', script: script_1, actions: ['ls'],
+                                       order: 1, previous_result_need: false, result: {}, rollbacks: 0)

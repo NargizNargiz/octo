@@ -3,5 +3,15 @@
   <component name="JavaScriptSettings">
     <option name="languageLevel" value="ES6" />
   </component>
+  <component name="ProjectPlainTextFileTypeManager">
+    <file url="file://$PROJECT_DIR$/db/migrate/20201031162707_create_active_storage_tables.active_storage.rb" />
+    <file url="file://$PROJECT_DIR$/db/migrate/20201031162708_create_script_executor_steps.script_executor.rb" />
+    <file url="file://$PROJECT_DIR$/db/migrate/20201031162709_create_script_executor_all_scripts_descriptions.script_executor.rb" />
+    <file url="file://$PROJECT_DIR$/db/migrate/20201031162710_create_script_executor_script_steps.script_executor.rb" />
+    <file url="file://$PROJECT_DIR$/db/migrate/20201031162711_create_script_executor_exec_scripts.script_executor.rb" />
+    <file url="file://$PROJECT_DIR$/db/migrate/20201031162712_add_exec_script_id_to_script_executor_steps.script_executor.rb" />
+    <file url="file://$PROJECT_DIR$/db/migrate/20201031162713_add_all_scripts_description_id_to_script_executor_script_steps.script_executor.rb" />
+    <file url="file://$PROJECT_DIR$/db/migrate/20201031162714_remove_name_step_from_script_executor_script_steps.script_executor.rb" />
+  </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="rbenv: 2.5.1" project-jdk-type="RUBY_SDK" />
 </project>

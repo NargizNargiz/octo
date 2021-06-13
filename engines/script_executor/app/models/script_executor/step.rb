@@ -31,5 +31,9 @@ module ScriptExecutor
 				 transitions from: %i[running failed success pending], to: :pending
 			 end
 		 end
+		 #
+		 # def run
+			#  ScriptExecutor::Steps::Run(self)
+		 # end
 	 end
 end

@@ -5,26 +5,34 @@ module ScriptExecutor
       @step = Step.new
     end
 
+    def all
+      @all = ScriptExecutor::Step.all
+      render json: @all
+    end
+
     def index
-      @steps = script_step.steps
+      @steps = script.steps
+      render json: @steps
     end
 
     def create
-      @step = script_step.steps.create(step_params[:step])
-      @step.exec_script_id = script_step.exec_script.id
+      @step = script.steps.create(step_params[:step])
+      @step.name_script = script.script_name
+      @step.exec_script_id = script.exec_script.id
       if @step.save
-        render :show, status: :created, step: @step
+        render json: @step, status: :created, step: @step
       else
         render json: @step.errors, status: :unprocessable_entity
       end
     end
 
     def edit
-      @step = script_step.steps.find(params[:id])
+      @step = script.steps.find(params[:id])
     end
 
     def show
-      @step = script_step.steps.find(params[:id])
+      @step = ScriptExecutor::Step.find(params[:id])
+      render json: @step
     end
 
     def destroy
@@ -32,24 +40,26 @@ module ScriptExecutor
     end
 
     def update
-      @step = Step.find(params[:id])
-      if @step.update(step_params[:step])
-        redirect_to script_executor_url(@step), notice: 'Step was successfully updated.'
+      @step = script.steps.find(params[:id])
+      if @step.update(update_params)
+        render json: @step
       else
-        respond_to do |format|
-          format.html{ render :edit }
-        end
+        render json: @step.errors
       end
     end
 
     private
 
     def step_params
-      params.permit(step: [:name_step, :name_script, :rollbacks, :status])
+      params.permit(step: [:name_step, :rollbacks, :status])
     end
 
-    def script_step
-      @script_step = ScriptExecutor::ScriptStep.find(params[:script_step_id])
+    def update_params
+      params.require(:step).permit(:status, :rollbacks, :result)
+    end
+
+    def script
+      @script = ScriptExecutor::Script.find(params[:script_id])
     end
 
     def sanitize_params

@@ -1,6 +1,14 @@
 FactoryBot.define do
-  factory :all_scripts_description, :class => "ScriptExecutor::AllScriptsDescription" do
+  factory :description, :class => "ScriptExecutor::Description" do
     name_script { "name-#{rand(100)}" }
-    steps { "#{rand(36**8).to_s(36)} #{rand(36**8).to_s(36)}" }
+    steps {
+      [
+          { name: rand(36**8).to_s(36),
+            order: 1,
+            previous_result_need: false,
+            actions: [ rand(36**8).to_s(36) ]
+          }
+      ]
+    }
   end
 end

@@ -1,11 +1,31 @@
 {
-  "type": "object",
-  "$schema": "http://json-schema.org/draft-04/schema",
-  "steps": {
-    "name": { "type": "string" },
-    "order": { "type": "string" },
-    "actions": { "type": "array" },
-    "previous_result_need": { "type": "boolean" },
-  },
-  "required": ["name", "order", "actions", "previous_result_need"]
+  "type": "array",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "items": {
+    "type": "object",
+    "required": [
+      "name",
+      "order",
+      "actions",
+      "previous_result_need"
+    ],
+    "properties": {
+      "name": {
+        "type": "string"
+      },
+      "order": {
+        "type": "number"
+      },
+      "actions": {
+        "type": "array",
+        "items": {
+          "type" : "string"
+        }
+      },
+      "previous_result_need": {
+        "type": "boolean"
+      }
+    }
+  }
 }
+

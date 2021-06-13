@@ -4,5 +4,6 @@ FactoryBot.define do
     rollbacks { 0 }
     status { :pending }
     name_script { "script#{rand(36**8).to_s(36)}" }
+    script { create(:script) }
   end
 end

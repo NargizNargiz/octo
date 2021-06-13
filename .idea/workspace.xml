@@ -2,29 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba4ff985-4edd-412b-9ca5-b47d148b1583" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/engines/script_executor/app/services/script_steps/create.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/engines/script_executor/spec/factories/all_scripts_description.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/engines/script_executor/spec/factories/exec_script.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/engines/script_executor/spec/factories/script_step.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/script_executor/spec/controllers/description/descriptions_controller_spec.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/script_executor/spec/controllers/script/scripts_controller_spec.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/octoshell-v2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/octoshell-v2.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20200120093443_create_script_executor_steps.script_executor.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20200120093443_create_script_executor_steps.script_executor.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engines/script_executor/app/controllers/script_executor/script_steps_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/engines/script_executor/app/controllers/script_executor/script_steps_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engines/reports/app/views/reports/constructor/_views.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/engines/reports/app/views/reports/constructor/_views.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engines/script_executor/app/assets/javascripts/script_executor/description/description.js" beforeDir="false" afterPath="$PROJECT_DIR$/engines/script_executor/app/assets/javascripts/script_executor/description/description.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engines/script_executor/app/controllers/script_executor/descriptions_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/engines/script_executor/app/controllers/script_executor/descriptions_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engines/script_executor/app/controllers/script_executor/steps_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/engines/script_executor/app/controllers/script_executor/steps_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engines/script_executor/app/helpers/script_executor/application_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/engines/script_executor/app/helpers/script_executor/application_helper.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engines/script_executor/app/models/script_executor/script_step.rb" beforeDir="false" afterPath="$PROJECT_DIR$/engines/script_executor/app/models/script_executor/script_step.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engines/script_executor/app/models/schemas/descriptions/step.json" beforeDir="false" afterPath="$PROJECT_DIR$/engines/script_executor/app/models/schemas/descriptions/step.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engines/script_executor/app/models/script_executor/description.rb" beforeDir="false" afterPath="$PROJECT_DIR$/engines/script_executor/app/models/script_executor/description.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engines/script_executor/app/models/script_executor/script.rb" beforeDir="false" afterPath="$PROJECT_DIR$/engines/script_executor/app/models/script_executor/script.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engines/script_executor/app/models/script_executor/step.rb" beforeDir="false" afterPath="$PROJECT_DIR$/engines/script_executor/app/models/script_executor/step.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engines/script_executor/app/services/step/create.rb" beforeDir="false" afterPath="$PROJECT_DIR$/engines/script_executor/app/services/step/create.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engines/script_executor/app/views/script_executor/steps/index.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/engines/script_executor/app/views/script_executor/steps/index.html.slim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engines/script_executor/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/engines/script_executor/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engines/script_executor/app/services/script_executor/service_object.rb" beforeDir="false" afterPath="$PROJECT_DIR$/engines/script_executor/app/services/script_executor/service_object.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engines/script_executor/db/migrate/20200120093443_create_script_executor_steps.rb" beforeDir="false" afterPath="$PROJECT_DIR$/engines/script_executor/db/migrate/20200120093443_create_script_executor_steps.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engines/script_executor/script_executor.gemspec" beforeDir="false" afterPath="$PROJECT_DIR$/engines/script_executor/script_executor.gemspec" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engines/script_executor/spec/controllers/step/steps_controller_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/engines/script_executor/spec/controllers/step/steps_controller_spec.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engines/script_executor/spec/controllers/step/steps_controller_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/engines/script_executor/spec/factories/description.rb" beforeDir="false" afterPath="$PROJECT_DIR$/engines/script_executor/spec/factories/description.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engines/script_executor/spec/factories/exec_script.rb" beforeDir="false" afterPath="$PROJECT_DIR$/engines/script_executor/spec/factories/exec_script.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engines/script_executor/spec/factories/script.rb" beforeDir="false" afterPath="$PROJECT_DIR$/engines/script_executor/spec/factories/script.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engines/script_executor/spec/factories/step.rb" beforeDir="false" afterPath="$PROJECT_DIR$/engines/script_executor/spec/factories/step.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engines/script_executor/spec/spec_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/engines/script_executor/spec/spec_helper.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/lib/codemirror/modes.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/lib/codemirror/modes.min.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +42,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -56,25 +65,177 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/job/marlin-new" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../serialized_json" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.ruby.settings.RubyActiveModuleSdkConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/engines/script_executor/app/models/schemas/description" />
+      <recent name="$PROJECT_DIR$/engines/script_executor/app/assets/javascripts" />
       <recent name="$PROJECT_DIR$/engines/script_executor/app/assets/javascripts/script_executor" />
-      <recent name="$PROJECT_DIR$/engines" />
+      <recent name="$PROJECT_DIR$/engines/script_executor/app/services/script_executor" />
+      <recent name="$PROJECT_DIR$/engines/script_executor/app/services/script" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/engines/script_executor/app/assets/javascripts" />
+      <recent name="$PROJECT_DIR$/engines/script_executor/app/assets/javascripts/script_executor" />
+      <recent name="$PROJECT_DIR$/engines/script_executor/app/views/script_executor/scripts" />
+      <recent name="$PROJECT_DIR$/engines/script_executor/db/migrate" />
+      <recent name="$PROJECT_DIR$/engines/script_executor/app/views/script_executor/steps" />
     </key>
   </component>
-  <component name="RunManager" selected="RSpec. check test">
+  <component name="RunManager" selected="RSpec.ConstructorService queries ...">
+    <configuration type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true" nameIsGenerated="true">
+      <module name="octoshell-v2" />
+      <predefined_log_file enabled="true" id="RUBY_RSPEC" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="RAILS_ENV" value="test" />
+        <env name="JRUBY_OPTS" value="-X+O" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" ENABLE_FORKED_COVERAGE="true">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/engines/script_executor/spec/controllers/script/scripts_controller_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATHS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE=" check test" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <method v="2" />
+    </configuration>
+    <configuration type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true" nameIsGenerated="true">
+      <module name="octoshell-v2" />
+      <predefined_log_file enabled="true" id="RUBY_RSPEC" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="RAILS_ENV" value="test" />
+        <env name="JRUBY_OPTS" value="-X+O" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" IGNORE_RCOVRT="true" ENABLE_BRANCH_COVERAGE="true" ENABLE_FORKED_COVERAGE="true">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/engines/script_executor/spec/controllers/script/scripts_controller_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATHS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="ScriptExecutor::ScriptStepsController check index" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <method v="2" />
+    </configuration>
+    <configuration type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true" nameIsGenerated="true">
+      <module name="octoshell-v2" />
+      <predefined_log_file enabled="true" id="RUBY_RSPEC" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="RAILS_ENV" value="test" />
+        <env name="JRUBY_OPTS" value="-X+O" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" ENABLE_FORKED_COVERAGE="true">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/engines/script_executor/spec/controllers/script/scripts_controller_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATHS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="ScriptExecutor::Steps" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <method v="2" />
+    </configuration>
+    <configuration type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda/Minitest" temporary="true" nameIsGenerated="true">
+      <module name="octoshell-v2" />
+      <predefined_log_file enabled="true" id="RUBY_TESTUNIT" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-Itest" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="RAILS_ENV" value="test" />
+        <env name="JRUBY_OPTS" value="-X+O" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" ENABLE_FORKED_COVERAGE="true">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/engines/script_executor/spec/controllers/script/scripts_controller_spec.rb" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPTS_PATHS" VALUE="$MODULE_DIR$/engines/script_executor/spec/controllers/step/steps_controller_spec.rb" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_METHOD_NAME" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="CUSTOM_SET_OF_FILES" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
+      <method v="2" />
+    </configuration>
     <configuration name=" check test" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true" nameIsGenerated="true">
       <module name="octoshell-v2" />
       <predefined_log_file enabled="true" id="RUBY_RSPEC" />
@@ -89,13 +250,15 @@
       </envs>
       <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
       <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" ENABLE_FORKED_COVERAGE="true">
         <COVERAGE_PATTERN ENABLED="true">
           <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
         </COVERAGE_PATTERN>
       </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/engines/script_executor/spec/controllers/step/steps_controller_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATHS" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE=" check test" />
@@ -109,7 +272,7 @@
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
       <method v="2" />
     </configuration>
-    <configuration name="ScriptExecutor::Steps check..." type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true" nameIsGenerated="true">
+    <configuration name="ConstructorService queries ..." type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true" nameIsGenerated="true">
       <module name="octoshell-v2" />
       <predefined_log_file enabled="true" id="RUBY_RSPEC" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
@@ -123,16 +286,18 @@
       </envs>
       <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
       <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" IGNORE_RCOVRT="true" ENABLE_BRANCH_COVERAGE="true" ENABLE_FORKED_COVERAGE="true">
         <COVERAGE_PATTERN ENABLED="true">
           <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
         </COVERAGE_PATTERN>
       </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/engines/script_executor/spec/controllers/step/steps_controller_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/engines/reports/spec/service/constructor_service_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATHS" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="ScriptExecutor::Steps check test" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="ConstructorService queries with joins" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
@@ -143,7 +308,7 @@
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
       <method v="2" />
     </configuration>
-    <configuration name="ScriptExecutor::Steps" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true" nameIsGenerated="true">
+    <configuration name="ScriptExecutor::ScriptSteps..." type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true" nameIsGenerated="true">
       <module name="octoshell-v2" />
       <predefined_log_file enabled="true" id="RUBY_RSPEC" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
@@ -157,16 +322,18 @@
       </envs>
       <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
       <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" IGNORE_RCOVRT="true" ENABLE_BRANCH_COVERAGE="true" ENABLE_FORKED_COVERAGE="true">
         <COVERAGE_PATTERN ENABLED="true">
           <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
         </COVERAGE_PATTERN>
       </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/engines/script_executor/spec/controllers/step/steps_controller_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATHS" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="ScriptExecutor::Steps" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="ScriptExecutor::ScriptStepsController check index" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
@@ -187,11 +354,12 @@
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
       <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
       <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" ENABLE_FORKED_COVERAGE="true">
         <COVERAGE_PATTERN ENABLED="true">
           <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
         </COVERAGE_PATTERN>
       </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SCRIPT_ARGS" VALUE="" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="IP" VALUE="0.0.0.0" />
@@ -211,11 +379,12 @@
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
       <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
       <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" ENABLE_FORKED_COVERAGE="true">
         <COVERAGE_PATTERN ENABLED="true">
           <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
         </COVERAGE_PATTERN>
       </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SCRIPT_ARGS" VALUE="" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="IP" VALUE="0.0.0.0" />
@@ -234,11 +403,12 @@
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
       <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
       <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" ENABLE_FORKED_COVERAGE="true">
         <COVERAGE_PATTERN ENABLED="true">
           <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
         </COVERAGE_PATTERN>
       </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="spec" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE=":rspec " />
@@ -260,11 +430,12 @@
       </envs>
       <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
       <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" ENABLE_FORKED_COVERAGE="true">
         <COVERAGE_PATTERN ENABLED="true">
           <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
         </COVERAGE_PATTERN>
       </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="test" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE=":test_unit " />
@@ -274,45 +445,15 @@
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TESTOPTS" VALUE="" />
       <method v="2" />
     </configuration>
-    <configuration name="steps_controller_spec" type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda/Minitest" temporary="true" nameIsGenerated="true">
-      <module name="octoshell-v2" />
-      <predefined_log_file enabled="true" id="RUBY_TESTUNIT" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-Itest" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
-      <envs>
-        <env name="RAILS_ENV" value="test" />
-        <env name="JRUBY_OPTS" value="-X+O" />
-      </envs>
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
-      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
-        <COVERAGE_PATTERN ENABLED="true">
-          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
-        </COVERAGE_PATTERN>
-      </EXTENSION>
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/engines/script_executor/spec/controllers/step/steps_controller_spec.rb" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_METHOD_NAME" VALUE="" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="RSpec.ConstructorService queries ..." />
+        <item itemvalue="RSpec.ScriptExecutor::ScriptSteps..." />
         <item itemvalue="RSpec. check test" />
-        <item itemvalue="Test::Unit/Shoulda/Minitest.steps_controller_spec" />
-        <item itemvalue="RSpec.ScriptExecutor::Steps" />
-        <item itemvalue="RSpec.ScriptExecutor::Steps check..." />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SpringUtil" SPRING_PRE_LOADER_OPTION="true" RAKE_SPRING_PRE_LOADER_OPTION="true" RAILS_SPRING_PRE_LOADER_OPTION="true" />
   <component name="SvnConfiguration">
     <configuration />
@@ -344,81 +485,99 @@
       <workItem from="1602876234546" duration="16326000" />
       <workItem from="1603049861205" duration="2834000" />
       <workItem from="1603058849039" duration="1315000" />
-      <workItem from="1603060928670" duration="2019000" />
+      <workItem from="1603060928670" duration="6716000" />
+      <workItem from="1603144202076" duration="3930000" />
+      <workItem from="1603172786770" duration="8559000" />
+      <workItem from="1603265415449" duration="1085000" />
+      <workItem from="1603300125712" duration="1185000" />
+      <workItem from="1603529833540" duration="11334000" />
+      <workItem from="1603636197888" duration="7025000" />
+      <workItem from="1603669844762" duration="2091000" />
+      <workItem from="1603749365870" duration="7570000" />
+      <workItem from="1604126338038" duration="4697000" />
+      <workItem from="1604140749116" duration="3322000" />
+      <workItem from="1604144353896" duration="1332000" />
+      <workItem from="1604146090960" duration="11712000" />
+      <workItem from="1604187067053" duration="2741000" />
+      <workItem from="1604218840991" duration="5028000" />
+      <workItem from="1604372318400" duration="8421000" />
+      <workItem from="1604475037650" duration="1491000" />
+      <workItem from="1604478742253" duration="4356000" />
+      <workItem from="1604659719026" duration="1198000" />
+      <workItem from="1604759027239" duration="21000" />
+      <workItem from="1604940668797" duration="418000" />
+      <workItem from="1604942456584" duration="60000" />
+      <workItem from="1605110546401" duration="4156000" />
+      <workItem from="1605483227544" duration="11000" />
+      <workItem from="1605484465612" duration="120000" />
+      <workItem from="1605779283197" duration="8688000" />
+      <workItem from="1605821491577" duration="79000" />
+      <workItem from="1606075156916" duration="6196000" />
+      <workItem from="1606186266741" duration="2272000" />
+      <workItem from="1606317785023" duration="1158000" />
+      <workItem from="1606334385617" duration="1202000" />
+      <workItem from="1606382009263" duration="5251000" />
+      <workItem from="1606389111402" duration="6204000" />
+      <workItem from="1606402099334" duration="3182000" />
+      <workItem from="1606754453172" duration="7000" />
+      <workItem from="1606756548473" duration="605000" />
+      <workItem from="1606844763093" duration="598000" />
+      <workItem from="1606897439533" duration="9000" />
+      <workItem from="1607011185454" duration="6028000" />
+      <workItem from="1607191548870" duration="7477000" />
+      <workItem from="1607320706452" duration="272000" />
+      <workItem from="1607363075035" duration="3106000" />
+      <workItem from="1607621597141" duration="2084000" />
+      <workItem from="1607624109431" duration="4767000" />
+      <workItem from="1607709728172" duration="4354000" />
+      <workItem from="1607792417706" duration="9070000" />
+      <workItem from="1607859658197" duration="12733000" />
+      <workItem from="1607880658172" duration="3531000" />
+      <workItem from="1608056062598" duration="4125000" />
+      <workItem from="1608068485641" duration="117000" />
+      <workItem from="1608125158128" duration="12687000" />
+      <workItem from="1608231598269" duration="5219000" />
+      <workItem from="1609001639212" duration="601000" />
+      <workItem from="1612437538697" duration="10000" />
+      <workItem from="1612855407744" duration="141000" />
+      <workItem from="1614432901066" duration="6346000" />
+      <workItem from="1614630625921" duration="7000" />
+      <workItem from="1615042076928" duration="5498000" />
+      <workItem from="1616163704926" duration="3000" />
+      <workItem from="1617465604601" duration="3807000" />
+      <workItem from="1617525092681" duration="3687000" />
+      <workItem from="1617543140311" duration="6796000" />
+      <workItem from="1617653411480" duration="4698000" />
+      <workItem from="1618012104985" duration="7808000" />
+      <workItem from="1618676648523" duration="8307000" />
+      <workItem from="1618862766689" duration="2275000" />
+      <workItem from="1618935704044" duration="3467000" />
+      <workItem from="1618993378316" duration="93000" />
+      <workItem from="1620483497779" duration="3056000" />
+      <workItem from="1620491629019" duration="3784000" />
+      <workItem from="1620856627917" duration="18000" />
+      <workItem from="1622295202252" duration="1815000" />
+      <workItem from="1622364164134" duration="7226000" />
+      <workItem from="1622564727155" duration="4349000" />
+      <workItem from="1622569737102" duration="3304000" />
+      <workItem from="1622656801888" duration="4955000" />
+      <workItem from="1622707505135" duration="32000" />
+      <workItem from="1622898139948" duration="44000" />
+      <workItem from="1622898226788" duration="1184000" />
+      <workItem from="1622907836602" duration="4943000" />
+      <workItem from="1622981245244" duration="6265000" />
+      <workItem from="1623585580449" duration="306000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="705" y="345" width="662" height="423" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1602785255103">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="705" y="345" width="662" height="423" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1602785255103" />
-    <state x="776" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1601400507955">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="776" y="311" width="424" height="491" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1601400507955" />
-    <state width="1807" height="266" key="GridCell.Tab.0.bottom" timestamp="1602788730716">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state width="1807" height="266" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1602788730716" />
-    <state width="1807" height="266" key="GridCell.Tab.0.center" timestamp="1602788730715">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state width="1807" height="266" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1602788730715" />
-    <state width="1807" height="266" key="GridCell.Tab.0.left" timestamp="1602788730715">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state width="1807" height="266" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1602788730715" />
-    <state width="1807" height="266" key="GridCell.Tab.0.right" timestamp="1602788730715">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state width="1807" height="266" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1602788730715" />
-    <state width="1807" height="266" key="GridCell.Tab.1.bottom" timestamp="1602788730716">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state width="1807" height="266" key="GridCell.Tab.1.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1602788730716" />
-    <state width="1807" height="266" key="GridCell.Tab.1.center" timestamp="1602788730716">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state width="1807" height="266" key="GridCell.Tab.1.center/67.27.1853.1053@67.27.1853.1053" timestamp="1602788730716" />
-    <state width="1807" height="266" key="GridCell.Tab.1.left" timestamp="1602788730716">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state width="1807" height="266" key="GridCell.Tab.1.left/67.27.1853.1053@67.27.1853.1053" timestamp="1602788730716" />
-    <state width="1807" height="266" key="GridCell.Tab.1.right" timestamp="1602788730716">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state width="1807" height="266" key="GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053" timestamp="1602788730716" />
-    <state x="482" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1601400368186">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="482" y="188" width="1022" height="737" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1601400368186" />
-    <state x="607" y="245" width="762" height="623" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1601321425731">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="607" y="245" width="762" height="623" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1601321425731" />
-    <state x="285" y="295" width="1344" height="955" key="dock-window-1" timestamp="1603012460666">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="285" y="295" width="1344" height="955" key="dock-window-1/67.27.1853.1053@67.27.1853.1053" timestamp="1603012460666" />
-    <state x="685" y="138" width="722" height="831" key="find.popup" timestamp="1603051132691">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="685" y="138" width="722" height="831" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1603051132691" />
-    <state x="656" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1601402628207">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="656" y="259" width="672" height="678" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1601402628207" />
+    <option name="version" value="3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="ruby-line">
-          <url>file://$PROJECT_DIR$/engines/script_executor/app/views/script_executor/script_steps/edit.html.slim</url>
-          <line>13</line>
+          <url>file://$PROJECT_DIR$/engines/script_executor/app/views/script_executor/descriptions/index.html.slim</url>
           <properties myBlockOrdinal="-1">
             <option name="block-ordinal" value="-1" />
           </properties>
@@ -428,9 +587,11 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/octoshell_v2@steps_controller_spec.rcov" NAME="steps_controller_spec Coverage Results" MODIFIED="1602788088214" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="octoshell-v2" />
+    <SUITE FILE_PATH="coverage/octoshell_v2@_check_test.rcov" NAME=" check test Coverage Results" MODIFIED="1606383022301" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="octoshell-v2" />
+    <SUITE FILE_PATH="coverage/octoshell_v2@ScriptExecutor__ScriptSteps___.rcov" NAME="ScriptExecutor::ScriptSteps... Coverage Results" MODIFIED="1620492159018" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="octoshell-v2" />
     <SUITE FILE_PATH="coverage/octoshell_v2@ScriptExecutor__Steps.rcov" NAME="ScriptExecutor::Steps Coverage Results" MODIFIED="1602786536986" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="octoshell-v2" />
-    <SUITE FILE_PATH="coverage/octoshell_v2@_check_test.rcov" NAME=" check test Coverage Results" MODIFIED="1602788135497" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="octoshell-v2" />
+    <SUITE FILE_PATH="coverage/octoshell_v2@steps_controller_spec.rcov" NAME="steps_controller_spec Coverage Results" MODIFIED="1602788088214" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="octoshell-v2" />
     <SUITE FILE_PATH="coverage/octoshell_v2@ScriptExecutor__Steps_check___.rcov" NAME="ScriptExecutor::Steps check... Coverage Results" MODIFIED="1602786499631" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="octoshell-v2" />
+    <SUITE FILE_PATH="coverage/octoshell_v2@ConstructorService_queries____.rcov" NAME="ConstructorService queries ... Coverage Results" MODIFIED="1620494271746" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="octoshell-v2" />
   </component>
 </project>

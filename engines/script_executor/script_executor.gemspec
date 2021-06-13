@@ -44,5 +44,6 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'byebug'
   spec.add_dependency 'pry'
   spec.add_dependency 'rails-controller-testing'
+  spec.add_dependency 'activerecord_json_validator'
   spec.test_files = Dir["spec/**/*"]
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_19_101452) do
+ActiveRecord::Schema.define(version: 2020_12_10_182609) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -869,7 +869,7 @@ ActiveRecord::Schema.define(version: 2020_11_19_101452) do
 
   create_table "script_executor_descriptions", force: :cascade do |t|
     t.string "name_script"
-    t.jsonb "steps"
+    t.jsonb "steps", default: []
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -896,7 +896,7 @@ ActiveRecord::Schema.define(version: 2020_11_19_101452) do
   create_table "script_executor_steps", force: :cascade do |t|
     t.string "name_step"
     t.string "name_script"
-    t.string "status"
+    t.integer "status"
     t.integer "rollbacks"
     t.bigint "script_id"
     t.bigint "exec_script_id"
